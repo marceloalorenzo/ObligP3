@@ -230,3 +230,90 @@
 1531325579 source:c:\users\marla.paniagua\downloads\obligatorio\menu.cpp
 	"Menu.h"
 
+1531236946 source:c:\users\mlorenzo\documents\github\obligp3\alumno.cpp
+	"Alumno.h"
+
+1531251530 c:\users\mlorenzo\documents\github\obligp3\alumno.h
+	<stdio.h>
+	"String.h"
+	"Aprobaciones.h"
+
+1531351800 c:\users\mlorenzo\documents\github\obligp3\string.h
+
+1531321786 c:\users\mlorenzo\documents\github\obligp3\aprobaciones.h
+	<stdio.h>
+	"Aprobacion.h"
+
+1531264812 c:\users\mlorenzo\documents\github\obligp3\aprobacion.h
+	<stdio.h>
+	"String.h"
+	"Fecha.h"
+	"Asignatura.h"
+
+1531352601 c:\users\mlorenzo\documents\github\obligp3\fecha.h
+	<stdio.h>
+	"Boolean.h"
+
+1531243972 c:\users\mlorenzo\documents\github\obligp3\boolean.h
+	<stdio.h>
+
+1531320059 c:\users\mlorenzo\documents\github\obligp3\asignatura.h
+	<stdio.h>
+	"String.h"
+
+1531243764 source:c:\users\mlorenzo\documents\github\obligp3\alumnos.cpp
+	"Alumnos.h"
+
+1531321975 c:\users\mlorenzo\documents\github\obligp3\alumnos.h
+	<stdio.h>
+	"Alumno.h"
+
+1531237118 source:c:\users\mlorenzo\documents\github\obligp3\aprobacion.cpp
+	"Aprobacion.h"
+
+1531251138 source:c:\users\mlorenzo\documents\github\obligp3\aprobaciones.cpp
+	"Aprobaciones.h"
+
+1531236537 source:c:\users\mlorenzo\documents\github\obligp3\asignatura.cpp
+	"Asignatura.h"
+
+1531244384 source:c:\users\mlorenzo\documents\github\obligp3\asignaturas.cpp
+	"Asignaturas.h"
+
+1531320311 c:\users\mlorenzo\documents\github\obligp3\asignaturas.h
+	<stdio.h>
+	"Asignatura.h"
+
+1531242207 source:c:\users\mlorenzo\documents\github\obligp3\boolean.cpp
+	"Boolean.h"
+
+1531237176 source:c:\users\mlorenzo\documents\github\obligp3\fecha.cpp
+	"Fecha.h"
+
+1531325579 source:c:\users\mlorenzo\documents\github\obligp3\menu.cpp
+	"Menu.h"
+
+1531324831 c:\users\mlorenzo\documents\github\obligp3\menu.h
+	"stdio.h"
+
+1531243365 source:c:\users\mlorenzo\documents\github\obligp3\previaturas.cpp
+	"Previaturas.h"
+
+1531333472 c:\users\mlorenzo\documents\github\obligp3\previaturas.h
+	<stdio.h>
+	"Boolean.h"
+
+1531237723 source:c:\users\mlorenzo\documents\github\obligp3\string.cpp
+	"String.h"
+
+1531334043 source:c:\users\mlorenzo\documents\github\obligp3\main.cpp
+	<stdio.h>
+	"CursoCocina.h"
+	"Menu.h"
+
+1531332456 c:\users\mlorenzo\documents\github\obligp3\cursococina.h
+	<stdio.h>
+	"Alumnos.h"
+	"Asignaturas.h"
+	"Previaturas.h"
+
