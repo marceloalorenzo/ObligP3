@@ -1,0 +1,35 @@
+-- LISTADO DE CONSULTAS SOLICITADAS EN EL OBLIGATORIO DE BD
+-- a) ¿Cuántos clientes por condición médica, por tipo de comida, y por mes, pidieron comidas en lo que va del año?
+-- pruebas
+select nro_cliente from clientes where cond_medica = 'HIPERTENSO';
+select p.nro_cliente from pide as p
+where p.fecha_pedido > '2018-01-01'
+order by p.nro_cliente;
+-- fin pruebas
+
+-- habria que ver si esta ok esta
+select count(p.nro_cliente) as Cant_clientes, cli.cond_medica as Condicion, c.tipo as Tipo_Comida, MONTH(p.fecha_pedido) as Mes
+from clientes as cli, comidas as c, pide as p
+where p.fecha_pedido > '2018-01-01'
+and p.nro_cliente = cli.nro_cliente
+and p.id_comida = c.id_comida
+GROUP BY cli.nro_cliente, cli.cond_medica, c.tipo, p.fecha_pedido;
+
+-- b) ¿Qué clientes (número de cliente y nombre) pidieron comidas en promociones que fueron mostradas
+-- entre el 1/3/2017 y el 31/3/2018 y qué comidas eran? (todos los datos de comida) (la fecha del pedido
+-- debe estar incluida en el período de la promo).
+
+-- c) ¿Qué comida (id comida, descripción) sin gluten ha sido promocionada más de una vez y nunca fue
+-- pedida? De dos soluciones, una con la consulta utilizando la cláusula {NOT} IN y otra con la cláusula
+-- {NOT} EXIST.
+
+-- d) Listar los datos de aquellos clientes que aún no han realizado ningún pedido. PROBADA Y CREO QUE OK!
+select c.nro_cliente, c.nombre, c.mail, c.calle, c.nro_puerta, c.fecha_reg, c.cond_medica
+from clientes as c
+where not exists (select *
+                  from pide as p
+                  where c.nro_cliente = p.nro_cliente);
+
+
+
+select distinct nro_cliente from pide;

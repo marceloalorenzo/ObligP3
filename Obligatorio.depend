@@ -1,0 +1,232 @@
+# depslib dependency file v1.0
+1531236946 source:c:\users\marla.paniagua\documents\workspace\obligatorio\alumno.cpp
+	"Alumno.h"
+
+1531251530 c:\users\marla.paniagua\documents\workspace\obligatorio\alumno.h
+	<stdio.h>
+	"String.h"
+	"Aprobaciones.h"
+
+1531237704 c:\users\marla.paniagua\documents\workspace\obligatorio\string.h
+
+1531249976 c:\users\marla.paniagua\documents\workspace\obligatorio\aprobaciones.h
+	<stdio.h>
+	"Aprobacion.h"
+
+1531243707 c:\users\marla.paniagua\documents\workspace\obligatorio\aprobacion.h
+	<stdio.h>
+	"String.h"
+	"Fecha.h"
+
+1531243955 c:\users\marla.paniagua\documents\workspace\obligatorio\fecha.h
+	<stdio.h>
+
+1531243764 source:c:\users\marla.paniagua\documents\workspace\obligatorio\alumnos.cpp
+	"Alumnos.h"
+
+1531243797 c:\users\marla.paniagua\documents\workspace\obligatorio\alumnos.h
+	<stdio.h>
+	"Alumno.h"
+
+1531237118 source:c:\users\marla.paniagua\documents\workspace\obligatorio\aprobacion.cpp
+	"Aprobacion.h"
+
+1531236537 source:c:\users\marla.paniagua\documents\workspace\obligatorio\asignatura.cpp
+	"Asignatura.h"
+
+1531251459 c:\users\marla.paniagua\documents\workspace\obligatorio\asignatura.h
+	<stdio.h>
+	"String.h"
+
+1531244384 source:c:\users\marla.paniagua\documents\workspace\obligatorio\asignaturas.cpp
+	"Asignaturas.h"
+
+1531244338 c:\users\marla.paniagua\documents\workspace\obligatorio\asignaturas.h
+	<stdio.h>
+	"Asignatura.h"
+
+1531242207 source:c:\users\marla.paniagua\documents\workspace\obligatorio\boolean.cpp
+	"Boolean.h"
+
+1531243972 c:\users\marla.paniagua\documents\workspace\obligatorio\boolean.h
+	<stdio.h>
+
+1531237176 source:c:\users\marla.paniagua\documents\workspace\obligatorio\fecha.cpp
+	"Fecha.h"
+
+1353751060 source:c:\users\marla.paniagua\documents\workspace\obligatorio\main.cpp
+	<iostream>
+
+1531243365 source:c:\users\marla.paniagua\documents\workspace\obligatorio\previaturas.cpp
+	"Previaturas.h"
+
+1531249541 c:\users\marla.paniagua\documents\workspace\obligatorio\previaturas.h
+	<stdio.h>
+	"Boolean.h"
+
+1531237723 source:c:\users\marla.paniagua\documents\workspace\obligatorio\string.cpp
+	"String.h"
+
+1531251138 source:c:\users\marla.paniagua\documents\workspace\obligatorio\aprobaciones.cpp
+	"Aprobaciones.h"
+
+1531236946 source:c:\users\mpani\downloads\obligatorio\alumno.cpp
+	"Alumno.h"
+
+1531251530 c:\users\mpani\downloads\obligatorio\alumno.h
+	<stdio.h>
+	"String.h"
+	"Aprobaciones.h"
+
+1531237704 c:\users\mpani\downloads\obligatorio\string.h
+
+1531249976 c:\users\mpani\downloads\obligatorio\aprobaciones.h
+	<stdio.h>
+	"Aprobacion.h"
+
+1531264812 c:\users\mpani\downloads\obligatorio\aprobacion.h
+	<stdio.h>
+	"String.h"
+	"Fecha.h"
+	"Asignatura.h"
+
+1531264378 c:\users\mpani\downloads\obligatorio\fecha.h
+	<stdio.h>
+	"Boolean.h"
+
+1531243972 c:\users\mpani\downloads\obligatorio\boolean.h
+	<stdio.h>
+
+1531251459 c:\users\mpani\downloads\obligatorio\asignatura.h
+	<stdio.h>
+	"String.h"
+
+1531243764 source:c:\users\mpani\downloads\obligatorio\alumnos.cpp
+	"Alumnos.h"
+
+1531266516 c:\users\mpani\downloads\obligatorio\alumnos.h
+	<stdio.h>
+	"Alumno.h"
+
+1531237118 source:c:\users\mpani\downloads\obligatorio\aprobacion.cpp
+	"Aprobacion.h"
+
+1531251138 source:c:\users\mpani\downloads\obligatorio\aprobaciones.cpp
+	"Aprobaciones.h"
+
+1531236537 source:c:\users\mpani\downloads\obligatorio\asignatura.cpp
+	"Asignatura.h"
+
+1531244384 source:c:\users\mpani\downloads\obligatorio\asignaturas.cpp
+	"Asignaturas.h"
+
+1531244338 c:\users\mpani\downloads\obligatorio\asignaturas.h
+	<stdio.h>
+	"Asignatura.h"
+
+1531242207 source:c:\users\mpani\downloads\obligatorio\boolean.cpp
+	"Boolean.h"
+
+1531237176 source:c:\users\mpani\downloads\obligatorio\fecha.cpp
+	"Fecha.h"
+
+1353751060 source:c:\users\mpani\downloads\obligatorio\main.cpp
+	<iostream>
+
+1531243365 source:c:\users\mpani\downloads\obligatorio\previaturas.cpp
+	"Previaturas.h"
+
+1531265519 c:\users\mpani\downloads\obligatorio\previaturas.h
+	<stdio.h>
+	"Boolean.h"
+
+1531237723 source:c:\users\mpani\downloads\obligatorio\string.cpp
+	"String.h"
+
+1531236946 source:c:\users\marla.paniagua\downloads\obligatorio\alumno.cpp
+	"Alumno.h"
+
+1531251530 c:\users\marla.paniagua\downloads\obligatorio\alumno.h
+	<stdio.h>
+	"String.h"
+	"Aprobaciones.h"
+
+1531237704 c:\users\marla.paniagua\downloads\obligatorio\string.h
+
+1531321786 c:\users\marla.paniagua\downloads\obligatorio\aprobaciones.h
+	<stdio.h>
+	"Aprobacion.h"
+
+1531264812 c:\users\marla.paniagua\downloads\obligatorio\aprobacion.h
+	<stdio.h>
+	"String.h"
+	"Fecha.h"
+	"Asignatura.h"
+
+1531264378 c:\users\marla.paniagua\downloads\obligatorio\fecha.h
+	<stdio.h>
+	"Boolean.h"
+
+1531243972 c:\users\marla.paniagua\downloads\obligatorio\boolean.h
+	<stdio.h>
+
+1531320059 c:\users\marla.paniagua\downloads\obligatorio\asignatura.h
+	<stdio.h>
+	"String.h"
+
+1531243764 source:c:\users\marla.paniagua\downloads\obligatorio\alumnos.cpp
+	"Alumnos.h"
+
+1531321975 c:\users\marla.paniagua\downloads\obligatorio\alumnos.h
+	<stdio.h>
+	"Alumno.h"
+
+1531237118 source:c:\users\marla.paniagua\downloads\obligatorio\aprobacion.cpp
+	"Aprobacion.h"
+
+1531251138 source:c:\users\marla.paniagua\downloads\obligatorio\aprobaciones.cpp
+	"Aprobaciones.h"
+
+1531236537 source:c:\users\marla.paniagua\downloads\obligatorio\asignatura.cpp
+	"Asignatura.h"
+
+1531244384 source:c:\users\marla.paniagua\downloads\obligatorio\asignaturas.cpp
+	"Asignaturas.h"
+
+1531320311 c:\users\marla.paniagua\downloads\obligatorio\asignaturas.h
+	<stdio.h>
+	"Asignatura.h"
+
+1531242207 source:c:\users\marla.paniagua\downloads\obligatorio\boolean.cpp
+	"Boolean.h"
+
+1531237176 source:c:\users\marla.paniagua\downloads\obligatorio\fecha.cpp
+	"Fecha.h"
+
+1531243365 source:c:\users\marla.paniagua\downloads\obligatorio\previaturas.cpp
+	"Previaturas.h"
+
+1531333472 c:\users\marla.paniagua\downloads\obligatorio\previaturas.h
+	<stdio.h>
+	"Boolean.h"
+
+1531237723 source:c:\users\marla.paniagua\downloads\obligatorio\string.cpp
+	"String.h"
+
+1531333462 source:c:\users\marla.paniagua\downloads\obligatorio\main.cpp
+	<stdio.h>
+	"CursoCocina.h"
+	"Menu.h"
+
+1531332456 c:\users\marla.paniagua\downloads\obligatorio\cursococina.h
+	<stdio.h>
+	"Alumnos.h"
+	"Asignaturas.h"
+	"Previaturas.h"
+
+1531324831 c:\users\marla.paniagua\downloads\obligatorio\menu.h
+	"stdio.h"
+
+1531325579 source:c:\users\marla.paniagua\downloads\obligatorio\menu.cpp
+	"Menu.h"
+
