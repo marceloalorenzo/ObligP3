@@ -23,7 +23,7 @@ void strCargar(String &s)
 }
 
 /* Libera la memoria usada por el string */
- void strDestruir (String &s);
+ void strDestruir (String &s)
  {
     delete [] s;
     s = NULL;
@@ -31,7 +31,7 @@ void strCargar(String &s)
 
 
 /* Devuelve el largo del String s */
-int strLar (String s);
+int strLar (String s)
 {
     int i=0;
     while (s[i] != '\0')
@@ -40,10 +40,10 @@ int strLar (String s);
 }
 
 /* Copia el contenido del string s2 en s1 */
-void strCop (String &s1, String s2);
+void strCop (String &s1, String s2)
 {
     int i = 0;
-    int largo = strlar(s2)+1;
+    int largo = strLar(s2)+1;
     delete [] s1;
     s1 = new char[largo];
     while (s2[i] != '\0')
@@ -55,9 +55,9 @@ void strCop (String &s1, String s2);
 }
 
 /* Lee el string s desde teclado */
-void strScan (String &s);
+void strScan (String &s)
 {
-    strings aux = new char[MAX];
+    String aux = new char[MAX];
     int i=0;
     char c;
     scanf("%c",&c);
@@ -68,12 +68,12 @@ void strScan (String &s);
         scanf("%c",&c);
     }
     aux[i] = '\0';
-    strcop(s,aux);
-    strdestruir(aux);
+    strCop(s,aux);
+    strDestruir(aux);
 }
 
 /* Imprime el string s por pantalla */
-void strPrint (String s);
+void strPrint (String s)
 {
     int i=0;
     while(s[i] != '\0')

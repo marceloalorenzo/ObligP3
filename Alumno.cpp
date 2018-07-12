@@ -40,30 +40,30 @@ int darCedula(Alumno a)
 /** Selectora del nombre */
 void darNombre(String &s, Alumno a)
 {
-    strcop(s,a.nombre);
+    strCop(s,a.nombre);
 }
 
 
 /** Selectora del apellido */
 void darApellido(String &s, Alumno a)
 {
-    strcop(s,a.apellido);
+    strCop(s,a.apellido);
 }
 
 /** Selectora del domicilio */
 void darDomicilio(String &s, Alumno a)
 {
-    strcop(s,a.domicilio);
+    strCop(s,a.domicilio);
 }
 
 /** Selectora del telefono */
-void darTelefono(Alumno a)
+int darTelefono(Alumno a)
 {
     return a.telefono;
 }
 
 /** Elimina la estructura de Alumno */
-void eliminarAlumno(Alumno &a)
+void eliminarAlumno(Alumno a)
 {
-    delete a;
+    eliminarAprobaciones(a.aprobaciones);
 }

@@ -317,3 +317,92 @@
 	"Asignaturas.h"
 	"Previaturas.h"
 
+1531350742 source:c:\users\mpani\documents\facultad\02.segundo\programacion iii\workspace\obligatorio\alumnos.cpp
+	"Alumnos.h"
+
+1531350742 c:\users\mpani\documents\facultad\02.segundo\programacion iii\workspace\obligatorio\alumnos.h
+	<stdio.h>
+	"Alumno.h"
+
+1531363035 c:\users\mpani\documents\facultad\02.segundo\programacion iii\workspace\obligatorio\alumno.h
+	<stdio.h>
+	"String.h"
+	"Aprobaciones.h"
+
+1531363203 c:\users\mpani\documents\facultad\02.segundo\programacion iii\workspace\obligatorio\string.h
+	<stdio.h>
+
+1531354074 c:\users\mpani\documents\facultad\02.segundo\programacion iii\workspace\obligatorio\aprobaciones.h
+	<stdio.h>
+	"Aprobacion.h"
+
+1531350742 c:\users\mpani\documents\facultad\02.segundo\programacion iii\workspace\obligatorio\aprobacion.h
+	<stdio.h>
+	"String.h"
+	"Fecha.h"
+	"Asignatura.h"
+
+1531353116 c:\users\mpani\documents\facultad\02.segundo\programacion iii\workspace\obligatorio\fecha.h
+	<stdio.h>
+	"Boolean.h"
+
+1531350742 c:\users\mpani\documents\facultad\02.segundo\programacion iii\workspace\obligatorio\boolean.h
+	<stdio.h>
+
+1531350742 c:\users\mpani\documents\facultad\02.segundo\programacion iii\workspace\obligatorio\asignatura.h
+	<stdio.h>
+	"String.h"
+
+1531350742 source:c:\users\mpani\documents\facultad\02.segundo\programacion iii\workspace\obligatorio\aprobacion.cpp
+	"Aprobacion.h"
+
+1531350742 source:c:\users\mpani\documents\facultad\02.segundo\programacion iii\workspace\obligatorio\aprobaciones.cpp
+	"Aprobaciones.h"
+
+1531350742 source:c:\users\mpani\documents\facultad\02.segundo\programacion iii\workspace\obligatorio\asignatura.cpp
+	"Asignatura.h"
+
+1531350742 source:c:\users\mpani\documents\facultad\02.segundo\programacion iii\workspace\obligatorio\asignaturas.cpp
+	"Asignaturas.h"
+
+1531350742 c:\users\mpani\documents\facultad\02.segundo\programacion iii\workspace\obligatorio\asignaturas.h
+	<stdio.h>
+	"Asignatura.h"
+
+1531350742 source:c:\users\mpani\documents\facultad\02.segundo\programacion iii\workspace\obligatorio\boolean.cpp
+	"Boolean.h"
+
+1531353116 source:c:\users\mpani\documents\facultad\02.segundo\programacion iii\workspace\obligatorio\fecha.cpp
+	<stdio.h>
+	"Fecha.h"
+
+1531350742 source:c:\users\mpani\documents\facultad\02.segundo\programacion iii\workspace\obligatorio\main.cpp
+	<stdio.h>
+	"CursoCocina.h"
+	"Menu.h"
+
+1531350742 c:\users\mpani\documents\facultad\02.segundo\programacion iii\workspace\obligatorio\cursococina.h
+	<stdio.h>
+	"Alumnos.h"
+	"Asignaturas.h"
+	"Previaturas.h"
+
+1531350742 c:\users\mpani\documents\facultad\02.segundo\programacion iii\workspace\obligatorio\previaturas.h
+	<stdio.h>
+	"Boolean.h"
+
+1531350742 c:\users\mpani\documents\facultad\02.segundo\programacion iii\workspace\obligatorio\menu.h
+	"stdio.h"
+
+1531350742 source:c:\users\mpani\documents\facultad\02.segundo\programacion iii\workspace\obligatorio\menu.cpp
+	"Menu.h"
+
+1531350742 source:c:\users\mpani\documents\facultad\02.segundo\programacion iii\workspace\obligatorio\previaturas.cpp
+	"Previaturas.h"
+
+1531363223 source:c:\users\mpani\documents\facultad\02.segundo\programacion iii\workspace\obligatorio\alumno.cpp
+	"Alumno.h"
+
+1531363282 source:c:\users\mpani\documents\facultad\02.segundo\programacion iii\workspace\obligatorio\string.cpp
+	"String.h"
+

@@ -33,7 +33,7 @@ void darApellido(String &s, Alumno a);
 void darDomicilio(String &s, Alumno a);
 
 /** Selectora del telefono */
-void darTelefono(Alumno a);
+int darTelefono(Alumno a);
 
 /** Elimina la estructura de Alumno */
 void eliminarAlumno(Alumno &a);
