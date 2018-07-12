@@ -20,19 +20,38 @@ void cargarAlumno(Alumno &a)
 void printAlumno(Alumno a)
 
 /** Selectora de la cedula */
-void darCedula(Alumno a)
+int darCedula(Alumno a)
+{
+    return a.cedula;
+}
 
 /** Selectora del nombre */
-void darNombre(Alumno a)
+void darNombre(String &s, Alumno a)
+{
+    strcop(s,a.nombre);
+}
+
 
 /** Selectora del apellido */
-void darApellido(Alumno a)
+void darApellido(String &s, Alumno a)
+{
+    strcop(s,a.apellido);
+}
 
 /** Selectora del domicilio */
-void darDomicilio(Alumno a)
+void darDomicilio(String &s, Alumno a)
+{
+    strcop(s,a.domicilio);
+}
 
 /** Selectora del telefono */
 void darTelefono(Alumno a)
+{
+    return a.telefono;
+}
 
 /** Elimina la estructura de Alumno */
 void eliminarAlumno(Alumno &a)
+{
+    delete a;
+}
