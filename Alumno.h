@@ -20,16 +20,17 @@ void cargarAlumno(Alumno &a);
 void printAlumno(Alumno a);
 
 /** Selectora de la cedula */
-void darCedula(Alumno a);
+int darCedula(Alumno a);
+
 
 /** Selectora del nombre */
-void darNombre(Alumno a);
+void darNombre(String &s, Alumno a);
 
 /** Selectora del apellido */
-void darApellido(Alumno a);
+void darApellido(String &s, Alumno a);
 
 /** Selectora del domicilio */
-void darDomicilio(Alumno a);
+void darDomicilio(String &s, Alumno a);
 
 /** Selectora del telefono */
 void darTelefono(Alumno a);
