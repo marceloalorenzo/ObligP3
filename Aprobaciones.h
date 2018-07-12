@@ -13,6 +13,9 @@ typedef NodoAprobaciones * Aprobaciones;
 /** Crea una lista de Aprobaciones vacia */
 void crearAprobaciones(Aprobaciones &a);
 
+/** Lista en pantalla todas las Aprobaciones de la Lista */
+void printAprobaciones(Aprobaciones a);
+
 /** Determina si una Aprobacion pertenece a la lista */
 Boolean perteneceAprobaciones(Aprobaciones a, Aprobacion aprobacion);
 

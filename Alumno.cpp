@@ -18,6 +18,18 @@ void cargarAlumno(Alumno &a)
 
 /** Muestra por pantalla los datos de un Alumno */
 void printAlumno(Alumno a)
+{
+    printf("Informacion del Alumno: ");
+    printf("Cedula: %d", a.cedula);
+    printf("Nombre: ");
+    strPrint(a.nombre);
+    printf("Apellido: ");
+    strPrint(a.apellido);
+    printf("Domicilio: ");
+    strPrint(a.domicilio);
+    printf("Telefono: %d", a.telefono);
+    printAprobaciones(a.aprobaciones);
+}
 
 /** Selectora de la cedula */
 void darCedula(Alumno a)
