@@ -46,6 +46,7 @@
 		<Unit filename="Asignaturas.h" />
 		<Unit filename="Boolean.cpp" />
 		<Unit filename="Boolean.h" />
+		<Unit filename="CursoCocina.cpp" />
 		<Unit filename="CursoCocina.h" />
 		<Unit filename="Fecha.cpp" />
 		<Unit filename="Fecha.h" />
