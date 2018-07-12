@@ -3,11 +3,18 @@
 #include <stdio.h>
 #include "Asignatura.h"
 
-const int N = 10;
+typedef struct { Asignatura * asignatura;
+                 int cantidad;
+                } Asignaturas;
 
-typedef Asignatura Asignaturas[N];
+/** Reserva dinámicamente n celdas para el arreglo
+    Precondición: n > 0 */
+void crearAsignaturas(Asignaturas &a, int n);
 
-/** Carga una asignatura al arreglo de Asignaturas */
+/** Libera dinámicamente las celdas ocupadas por el arreglo */
+void eliminarAignaturas(Asignaturas &a);
+
+/** Carga el arreglo de Asignaturas desde teclado */
 void cargarAsignaturas(Asignaturas &a, Asignatura asignatura);
 
 /** Muestra por pantalla cada una de las Asignaturas del Arreglo */
