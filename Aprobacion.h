@@ -20,7 +20,7 @@ void printAprobacion(Aprobacion a);
 int darNumeroAsig(Aprobacion a);
 
 /** Selectora del nombre de Asignatura */
-String darNombreAsig(Aprobacion a);
+String darNombreAsig(String &s, Aprobacion a);
 
 /** Selectora de la Fecha de Aprobacion */
 Fecha darFechaAprobacion(Aprobacion a);
