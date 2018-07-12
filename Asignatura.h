@@ -11,7 +11,7 @@ typedef struct {int numero;
 void cargarAsignatura(Asignatura &a, int num);
 
 /** Selectora del nombre */
-void darNombre(Asignatura a);
+void darNombre(String &s, Asignatura a);
 
 /** Selectora del numero */
 void darNumero(Asignatura a);
