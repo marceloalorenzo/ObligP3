@@ -21,15 +21,23 @@ void insertarAprobaciones(Aprobaciones &a, Aprobacion aprobacion){
     if(a == NULL){
         a = aux;
     } else {
-        Aprobaciones aux2 = a;
-        while((esMenorFecha(darFechaAprobacion(aux2->aprobacion), darFechaAprobacion(aprobacion))) && aux2 != NULL){
-            aux2 = aux2->sig;
+        Aprobaciones iter = a;
+        if(iter->sig == NULL){
+            if(esMenorFecha(darFechaAprobacion(iter->aprobacion), darFechaAprobacion(aprobacion))){
+                iter->sig = aux
+            } else {
+                a = aux;
+                a->sig = iter;
+            }
+        } else {
+            while(iter->sig != NULL
+                  &&
+                  esMenorFecha(darFechaAprobacion(iter->sig->aprobacion), darFechaAprobacion(aprobacion))){
+                      iter = iter->sig;
+            }
+            aux->sig = iter->sig;
+            iter->sig = aux;
         }
-        aux->sig = aux2;
-        while((esMenorFecha(darFechaAprobacion(a->aprobacion), darFechaAprobacion(aprobacion))) && a != NULL){
-            a = a->sig;
-        }
-        a->sig = aux;
     }
 }
 
