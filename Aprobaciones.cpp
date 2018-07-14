@@ -16,24 +16,19 @@ void printAprobaciones(Aprobaciones a){
 /** Inserta una Aprobacion a la lista de Aprobaciones ordenado por fecha de aprobacion */
 void insertarAprobaciones(Aprobaciones &a, Aprobacion aprobacion){
     Aprobaciones aux = new NodoAprobaciones;
+    Fecha fechaAprobIngresar = darFechaAprobacion(Aprobacion);
     aux->aprobacion = aprobacion;
     aux->sig = NULL;
     if(a == NULL){
         a = aux;
     } else {
         Aprobaciones iter = a;
-        if(iter->sig == NULL){
-            if(esMenorFecha(darFechaAprobacion(iter->aprobacion), darFechaAprobacion(aprobacion))){
-                iter->sig = aux
-            } else {
+        if(esMayorFecha(darFechaAprobacion(iter->aprobacion), fechaAprobIngresar)){
                 a = aux;
                 a->sig = iter;
-            }
         } else {
-            while(iter->sig != NULL
-                  &&
-                  esMenorFecha(darFechaAprobacion(iter->sig->aprobacion), darFechaAprobacion(aprobacion))){
-                      iter = iter->sig;
+            while(iter->sig != NULL && esMenorFecha(darFechaAprobacion(iter->sig->aprobacion), fechaAprobIngresar)){
+                iter = iter->sig;
             }
             aux->sig = iter->sig;
             iter->sig = aux;
