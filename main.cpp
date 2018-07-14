@@ -7,7 +7,6 @@ int main()
     Boolean salir = FALSE;
     int opcion;
 
-
     while (!salir){
         menu(opcion);
         switch(opcion){

@@ -1,14 +1,12 @@
 #include "Alumnos.h"
 
-
-
 /** Devuelve la altura del AVL Alumnos */
 int alturaAlumnos(Alumnos a)
 {
-if (a == NULL)
-return 0;
-else
-return a->altura;
+    if (a == NULL)
+        return 0;
+    else
+        return a->altura;
 }
 
 /** Balancea el AVL de Alumnos */
@@ -16,54 +14,67 @@ void balancearAlumnos(Alumnos &a)
 {
     if (a != NULL)
     {
-        if (altura(a->hizq) - altura(a->hder) == 2)
+        if (alturaAlumnos(a->hIzq) - alturaAlumnos(a->hDer) == 2)
         {
-            if (altura(a->hizq->hizq) >= altura(a->hizq->hder))
-                RotacionSimpleIzquierda (a);
+            if (alturaAlumnos(a->hIzq->hIzq) >= alturaAlumnos(a->hIzq->hDer))
+                RotacionSimpleIzquierda(a);
             else
-            RotacionDobleIzquierda (a);
+                RotacionDobleIzquierda(a);
         }
         else
         {
-            if (altura(a->hder) - altura(a->hizq) == 2)
+            if (alturaAlumnos(a->hDer) - alturaAlumnos(a->hIzq) == 2)
             {
-                if (altura(a->hder->hder) >= altura(a->hder->hizq))
-                    RotacionSimpleDerecha (a);
+                if (alturaAlumnos(a->hDer->hDer) >= alturaAlumnos(a->hDer->hIzq))
+                    RotacionSimpleDerecha(a);
                 else
-                RotacionDobleDerecha (a);
+                    RotacionDobleDerecha(a);
             }
         }
     }
 }
 
 /** Crea el AVL de Alumnos vacio */
-void crearAlumnos(Alumnos &a)
+void crearAlumnos(Alumnos &a);
 
 /** Determina si Alumnos es vacio */
-Boolean vacioAlumnos(Alumnos a)
+Boolean vacioAlumnos(Alumnos a);
 
 /** Determina si el alumno alumn pertenece al AVL de Alumnos */
-Boolean perteneceAlumnos(Alumnos a, Alumno alumn)
+Boolean perteneceAlumnos(Alumnos a, Alumno alumn);
 
 /** Inserta un Alumno al AVL de Alumnos */
 void insertarAlumnos(Alumnos &a, Alumno alumn)
 {
     if (a == NULL){
-        a = new nodo;
-        a -> info = alumn;
-        a -> hizq = NULL;
-        a -> hder = NULL;
-        a -> altura = 1;
+        a = new NodoAVL;
+        a->alumno = alumn;
+        a->hIzq = NULL;
+        a->hDer = NULL;
+        a->altura = 1;
     }else{
-    if (alumn < a->info)
-        Insertar (a->hizq,alumn);
+    if (darCedula(alumn) < darCedula(a->alumno))
+        insertarAlumnos(a->hIzq,alumn);
     else
-        Insertar (a->HDer,alumn);
-        Balancear (a);
-        a -> altura = 1 + max(Altura(a->hizq), altura(a->hder));
+        insertarAlumnos(a->hDer,alumn);
+        balancearAlumnos(a);
+        a->altura = 1 + fmax(alturaAlumnos(a->hIzq), alturaAlumnos(a->hDer));
     }
 }
 
 /** Elimina el AVL de Alumnos, liberando la memoria */
-void eliminarAlumnos(Alumnos &a)
+void eliminarAlumnos(Alumnos &a);
+
+/** Rotaciones */
+void RotacionSimpleIzquierda(Alumnos &a){
+}
+
+void RotacionSimpleDerecha(Alumnos &a){
+}
+
+void RotacionDobleIzquierda(Alumnos &a){
+}
+
+void RotacionDobleDerecha(Alumnos &a){
+}
 

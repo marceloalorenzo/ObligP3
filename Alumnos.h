@@ -1,6 +1,7 @@
 #ifndef ALUMNOS_H_INCLUDED
 #define ALUMNOS_H_INCLUDED
 #include <stdio.h>
+#include <math.h>
 #include "Alumno.h"
 
 typedef struct nodoA {Alumno alumno;
@@ -31,5 +32,15 @@ void insertarAlumnos(Alumnos &a, Alumno alumn);
 
 /** Elimina el AVL de Alumnos, liberando la memoria */
 void eliminarAlumnos(Alumnos &a);
+
+
+/** Rotaciones */
+void RotacionSimpleIzquierda(Alumnos &a);
+
+void RotacionSimpleDerecha(Alumnos &a);
+
+void RotacionDobleIzquierda(Alumnos &a);
+
+void RotacionDobleDerecha(Alumnos &a);
 
 #endif // ALUMNOS_H_INCLUDED

@@ -16,7 +16,7 @@ void printAprobaciones(Aprobaciones a){
 /** Inserta una Aprobacion a la lista de Aprobaciones ordenado por fecha de aprobacion */
 void insertarAprobaciones(Aprobaciones &a, Aprobacion aprobacion){
     Aprobaciones aux = new NodoAprobaciones;
-    Fecha fechaAprobIngresar = darFechaAprobacion(Aprobacion);
+    Fecha fechaAprobIngresar = darFechaAprobacion(aprobacion);
     aux->aprobacion = aprobacion;
     aux->sig = NULL;
     if(a == NULL){
