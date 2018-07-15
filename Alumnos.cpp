@@ -35,13 +35,22 @@ void balancearAlumnos(Alumnos &a)
 }
 
 /** Crea el AVL de Alumnos vacio */
-void crearAlumnos(Alumnos &a);
+void crearAlumnos(Alumnos &a)
+{
+    a = NULL;
+}
 
 /** Determina si Alumnos es vacio */
-Boolean vacioAlumnos(Alumnos a);
+Boolean vacioAlumnos(Alumnos a)
+{
+    boolean es=FALSE;
+    if(a == NULL)
+        es = TRUE;
+    return es;
+}
 
 /** Determina si el alumno alumn pertenece al AVL de Alumnos */
-Boolean perteneceAlumnos(Alumnos a, Alumno alumn);
+Boolean perteneceAlumnos(Alumnos a, Alumno alumn)
 
 /** Inserta un Alumno al AVL de Alumnos */
 void insertarAlumnos(Alumnos &a, Alumno alumn)
@@ -63,18 +72,22 @@ void insertarAlumnos(Alumnos &a, Alumno alumn)
 }
 
 /** Elimina el AVL de Alumnos, liberando la memoria */
-void eliminarAlumnos(Alumnos &a);
+void eliminarAlumnos(Alumnos &a)
 
 /** Rotaciones */
-void RotacionSimpleIzquierda(Alumnos &a){
+void RotacionSimpleIzquierda(Alumnos &a)
+{
 }
 
-void RotacionSimpleDerecha(Alumnos &a){
+void RotacionSimpleDerecha(Alumnos &a)
+{
 }
 
-void RotacionDobleIzquierda(Alumnos &a){
+void RotacionDobleIzquierda(Alumnos &a)
+{
 }
 
-void RotacionDobleDerecha(Alumnos &a){
+void RotacionDobleDerecha(Alumnos &a)
+{
 }
 
