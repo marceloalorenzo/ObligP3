@@ -16,15 +16,15 @@ void eliminarAignaturas(Asignaturas &a){
 }
 
 /** Carga el arreglo de Asignaturas desde teclado */
-void cargarAsignaturas(Asignaturas &a, Asignatura asignatura){
+void cargarAsignaturas(Asignaturas &a){
     for(int i = 0; i < a.cantidad; i++){
-        // cargarAsignatura(asignatura,  i);
+        cargarAsignatura(a.asignatura[i],  i);
     }
 }
 
 /** Muestra por pantalla cada una de las Asignaturas del Arreglo */
 void mostrarAsignaturas(Asignaturas a){
     for(int i = 0; i < a.cantidad; i++){
-        // printAsignatura(a.asignatura[a.cantidad]);
+        printAsignatura(a.asignatura[i]);
     }
 }

@@ -60,7 +60,7 @@ void strScan (String &s)
     String aux = new char[MAX];
     int i=0;
     char c;
-    scanf("%c",&c);
+    scanf(" %c",&c);
     while (c != '\n' && i < MAX)
     {
         aux[i]=c;
@@ -75,10 +75,10 @@ void strScan (String &s)
 /* Imprime el string s por pantalla */
 void strPrint (String s)
 {
-    int i=0;
+    int i = 0;
     while(s[i] != '\0')
     {
-        printf("%c",s[i]);
+        printf("%c", s[i]);
         i++;
     }
 }

@@ -15,7 +15,7 @@ void crearAsignaturas(Asignaturas &a, int n);
 void eliminarAignaturas(Asignaturas &a);
 
 /** Carga el arreglo de Asignaturas desde teclado */
-void cargarAsignaturas(Asignaturas &a, Asignatura asignatura);
+void cargarAsignaturas(Asignaturas &a);
 
 /** Muestra por pantalla cada una de las Asignaturas del Arreglo */
 void mostrarAsignaturas(Asignaturas a);

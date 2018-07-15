@@ -4,11 +4,23 @@
  Al momento de registrar cada una, se le asignará también un número que la
  identificará posteriormente en el programa. La primera asignatura en ser registrada
  tendrá el número 0, la siguiente el número 1, la siguiente el número 2, y así sucesivamente. */
+void registraAsignaturas(Asignaturas &a){
+    /* TODO: validar que la cantidad de asignaturas ingresada sea un numero mayor que cero */
+    int cantAsignaturas;
+    printf("\n Cantidad de Asignaturas de la Carrera: ");
+    scanf("%d", &cantAsignaturas);
+    crearAsignaturas(a, cantAsignaturas);
+    printf("\n  Ingresar las asignaturas: \n");
+    cargarAsignaturas(a);
+}
 
 
 /** 2. Listar número y nombre de todas las asignaturas registradas en el sistema,
  ordenadas por número de asignatura de menor a mayor. */
-
+void listarAsignaturas(Asignaturas a){
+    printf("\n Listado de Asignaturas: ");
+    mostrarAsignaturas(a);
+}
 
 /** 3. Dados los números que identifican a dos asignaturas, agregar una previatura entre ellas,
  cuidando que no se forme un ciclo de previaturas en el sistema. */

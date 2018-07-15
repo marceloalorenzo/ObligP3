@@ -6,15 +6,16 @@ int main()
 {
     Boolean salir = FALSE;
     int opcion;
+    Asignaturas asignaturas;
 
     while (!salir){
         menu(opcion);
         switch(opcion){
             case 1:
-
+                registraAsignaturas(asignaturas);
                 break;
             case 2:
-
+                listarAsignaturas(asignaturas);
                 break;
             case 3:
 

@@ -1,9 +1,8 @@
 #include "Asignatura.h"
 void cargarAsignatura(Asignatura &a, int num){
-    printf("Ingrese nombre de asignatura: ");
+    printf("\n   Nombre Asignatura %d: ", num);
     strScan(a.nombre);
-    printf("Ingrese numero de asignatura: ");
-    scanf("%d",&num);
+    a.numero = num;
 }
 /** Selectora del nombre */
 void darNombre(String &s, Asignatura a){
@@ -17,7 +16,6 @@ int darNumero(Asignatura a){
 
 /** Muestra la asignatura en pantalla */
 void printAsignatura(Asignatura a){
-    printf("Nombre de asignatura: ");
+    printf("\n  %d - ", a.numero);
     strPrint(a.nombre);
-    printf("Numero de asignatura: %d", a.numero);
 }
