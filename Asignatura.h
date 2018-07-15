@@ -7,14 +7,14 @@ typedef struct {int numero;
                 String nombre;
                 } Asignatura;
 
-/** Carga una Asignatura recibiendo como parámetro el número de Asignatura */
+/** Carga una Asignatura recibiendo como parÃ¡metro el nÃºmero de Asignatura */
 void cargarAsignatura(Asignatura &a, int num);
 
 /** Selectora del nombre */
 void darNombre(String &s, Asignatura a);
 
 /** Selectora del numero */
-void darNumero(Asignatura a);
+int darNumero(Asignatura a);
 
 /** Muestra la asignatura en pantalla */
 void printAsignatura(Asignatura a);
