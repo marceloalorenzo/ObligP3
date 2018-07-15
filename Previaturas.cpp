@@ -36,7 +36,10 @@ int largo(ListaAdy l){
   
 
 void desplegarListaAdy(Previaturas p){
-
+while(l!=NULL)
+  printf("%d",l->info);
+  l=l->sig;
+}
 /** Crear un grafo de N vértices y sin aristas */
 void crearGrafoPreviaturas(Previaturas &p){
 
