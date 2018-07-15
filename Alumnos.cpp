@@ -51,6 +51,18 @@ Boolean vacioAlumnos(Alumnos a)
 
 /** Determina si el alumno alumn pertenece al AVL de Alumnos */
 Boolean perteneceAlumnos(Alumnos a, Alumno alumn)
+{
+    if (a == NULL)
+        return FALSE;
+    else
+        if (a->info == e)
+            return TRUE;
+        else
+            if (e < a->info)
+                return Pertenece(a->HIzq,e);
+            else
+                return Pertenece(a->HDer,e);
+}
 
 /** Inserta un Alumno al AVL de Alumnos */
 void insertarAlumnos(Alumnos &a, Alumno alumn)
@@ -73,21 +85,50 @@ void insertarAlumnos(Alumnos &a, Alumno alumn)
 
 /** Elimina el AVL de Alumnos, liberando la memoria */
 void eliminarAlumnos(Alumnos &a)
+{
+    if (a != NULL)
+    {
+        Posorden (a->HIzq);
+        Posorden (a->HDer);
+        delete a;
+        a = NULL;
+    }
+}
 
 /** Rotaciones */
 void RotacionSimpleIzquierda(Alumnos &a)
 {
+    Alumnos aux = a->hizq;
+    a->hizq = aux->hder;
+    aux->hder = a;
+    a = aux;
+    a->altura = ls->altura + 1;
+    a->hder->altura = a->hder->altura - 1;
 }
 
 void RotacionSimpleDerecha(Alumnos &a)
 {
+    Alumnos aux = a->hder;
+    a->hder = aux->hder;
+    aux->hIzq = a;
+    a = aux;
+    a->altura = ls->altura + 1;
+    a->hIzq->altura = a->hizq->altura - 1;
 }
 
 void RotacionDobleIzquierda(Alumnos &a)
 {
+    RotacionSimpleDerecha (a->hizq);
+    RotacionSimpleIzquierda (a);
+    a->altura = a->altura - 1;
+    a->hder->altura = a->hder->altura - 1;
 }
 
 void RotacionDobleDerecha(Alumnos &a)
 {
+    RotacionSimpleIzquierda (a->hder);
+    RotacionSimpleDerecha (a);
+    a->altura = a->altura - 1;
+    a->hizq->altura = a->hizq->altura - 1;
 }
 
