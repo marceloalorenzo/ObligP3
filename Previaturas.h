@@ -9,9 +9,9 @@ typedef struct nodoL { int numAsignatura;
 
 typedef NodoPreviaturas * ListaAdy;
 
-const int M = 10;
+const int N = 10;
 
-typedef ListaAdy Previaturas[M];
+typedef ListaAdy Previaturas[N];
 
 /** Operaciones Auxiliares */
 void crear(ListaAdy &l);
@@ -22,7 +22,7 @@ Boolean pertenece(ListaAdy l, int n);
 
 int largo(ListaAdy l);
 
-void desplegarListaAdy(listaAdy l);
+void desplegarListaAdy(ListaAdy l);
 
 /** Crear un grafo de N vértices y sin aristas */
 void crearGrafoPreviaturas(Previaturas &p);
