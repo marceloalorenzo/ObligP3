@@ -35,7 +35,7 @@ int largo(ListaAdy l){
   
   
 
-void desplegarListaAdy(Previaturas p){
+void desplegarListaAdy(ListaAdy l){
 while(l!=NULL)
   printf("%d",l->info);
   l=l->sig;
