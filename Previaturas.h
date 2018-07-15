@@ -22,16 +22,16 @@ Boolean pertenece(ListaAdy l, int n);
 
 int largo(ListaAdy l);
 
-void desplegarListaAdy(Previaturas p);
+void desplegarListaAdy(listaAdy l);
 
-/** Crear un grafo de N vértices y sin aristas */
+/** Crear un grafo de N vÃ©rtices y sin aristas */
 void crearGrafoPreviaturas(Previaturas &p);
 
-/** Dados dos números de asignaturas agregar una previatura entre ellas */
+/** Dados dos nÃºmeros de asignaturas agregar una previatura entre ellas */
 void agregarPreviatura(Previaturas &p, int a1, int a2);
 
-/** Dado el número que identifica a una asignatura,
- obtener un listado conteniendo número y nombre de todas sus previas */
+/** Dado el nÃºmero que identifica a una asignatura,
+ obtener un listado conteniendo nÃºmero y nombre de todas sus previas */
 void listarPrevias(Previaturas p, int asignatura);
 
 #endif // PREVIATURAS_H_INCLUDED
