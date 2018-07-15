@@ -32,6 +32,6 @@ void agregarPreviatura(Previaturas &p, int a1, int a2);
 
 /** Dado el número que identifica a una asignatura,
  obtener un listado conteniendo número y nombre de todas sus previas */
-void listarPrevias(Previaturas p, int asignatura);
+void listarPrevias(Previaturas p, int numAsignatura);
 
 #endif // PREVIATURAS_H_INCLUDED
