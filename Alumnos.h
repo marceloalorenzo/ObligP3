@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <math.h>
 #include "Alumno.h"
-
+#include "Boolean.h"
 typedef struct nodoA {Alumno alumno;
                       nodoA * hIzq;
                       nodoA * hDer;
