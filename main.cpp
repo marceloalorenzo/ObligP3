@@ -7,6 +7,7 @@ int main()
     Boolean salir = FALSE;
     int opcion;
     Asignaturas asignaturas;
+    Alumnos alumnos;
 
     while (!salir){
         menu(opcion);
@@ -24,7 +25,7 @@ int main()
 
                 break;
             case 5:
-
+                ingresarNuevoAlumno(alumnos);
                 break;
             case 6:
 

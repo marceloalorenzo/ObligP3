@@ -14,7 +14,7 @@ typedef struct {int dia;
 void cargarFecha(Fecha &f);
 
 //muestra una fecha por pantalla
-void mostrarFecha(Fecha f);
+void printFecha(Fecha f);
 
 //selectora del dia
 int darDia(Fecha f);

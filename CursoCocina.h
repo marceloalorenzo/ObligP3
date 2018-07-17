@@ -25,7 +25,7 @@ void listarAsignaturas(Asignaturas a);
 
 
 /** 5. Ingresar un nuevo alumno a la academia, chequeando que no existiera previamente. */
-
+void ingresarNuevoAlumno(Alumnos &a);
 
 /** 6. Listar los datos básicos de todos los alumnos de la academia,
  ordenados por cédula de menor a mayor. */

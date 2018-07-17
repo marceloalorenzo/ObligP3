@@ -17,18 +17,18 @@ void balancearAlumnos(Alumnos &a)
         if (alturaAlumnos(a->hIzq) - alturaAlumnos(a->hDer) == 2)
         {
             if (alturaAlumnos(a->hIzq->hIzq) >= alturaAlumnos(a->hIzq->hDer))
-                RotacionSimpleIzquierda(a);
+                rotacionSimpleIzquierda(a);
             else
-                RotacionDobleIzquierda(a);
+                rotacionDobleIzquierda(a);
         }
         else
         {
             if (alturaAlumnos(a->hDer) - alturaAlumnos(a->hIzq) == 2)
             {
                 if (alturaAlumnos(a->hDer->hDer) >= alturaAlumnos(a->hDer->hIzq))
-                    RotacionSimpleDerecha(a);
+                    rotacionSimpleDerecha(a);
                 else
-                    RotacionDobleDerecha(a);
+                    rotacionDobleDerecha(a);
             }
         }
     }
@@ -50,21 +50,20 @@ Boolean vacioAlumnos(Alumnos a)
 }
 
 
-/** Determina si el alumno alumn pertenece al AVL de Alumnos
-Boolean perteneceAlumnos(Alumnos a, Alumno alumn)
-{
-Boolean encontre=FALSE;
-while ((!encontre) && (a != NULL))
-if (alumn == a->info)
-encontre = TRUE;
-else
-if (alumn < a->info)
-a = a -> hIzq;
-else
-a = a -> hDer;
-return encontre;
+/** Determina si el alumno alumn pertenece al AVL de Alumnos */
+Boolean perteneceAlumnos(Alumnos a, Alumno alumn){
+    if(a == NULL)
+        return FALSE;
+    if (darCedula(alumn) == darCedula(a->alumno))
+        return TRUE;
+    else {
+        if (darCedula(alumn) < darCedula(a->alumno))
+            perteneceAlumnos(a->hIzq, alumn);
+        else
+            perteneceAlumnos(a->hDer, alumn);
+    }
 }
-*/
+
 /** Inserta un Alumno al AVL de Alumnos */
 void insertarAlumnos(Alumnos &a, Alumno alumn)
 {
@@ -89,47 +88,46 @@ void eliminarAlumnos(Alumnos &a)
 {
     if (a != NULL)
     {
-        Posorden (a->hIzq);
-        Posorden (a->hDer);
+        eliminarAlumnos(a->hIzq);
+        eliminarAlumnos(a->hDer);
         delete a;
-        a = NULL;
     }
 }
 
 /** Rotaciones */
-void RotacionSimpleIzquierda(Alumnos &a)
+void rotacionSimpleIzquierda(Alumnos &a)
 {
     Alumnos aux = a->hIzq;
-    a->hIzq = aux->hDer
+    a->hIzq = aux->hDer;
     aux->hDer = a;
     a = aux;
-    a->altura = ls->altura + 1;
+    a->altura = a->altura + 1;
     a->hDer->altura = a->hDer->altura - 1;
 }
 
-void RotacionSimpleDerecha(Alumnos &a)
+void rotacionSimpleDerecha(Alumnos &a)
 {
-    Alumnos aux = a->hder;
-    a->hder = aux->hder;
+    Alumnos aux = a->hDer;
+    a->hDer = aux->hDer;
     aux->hIzq = a;
     a = aux;
-    a->altura = ls->altura + 1;
-    a->hIzq->altura = a->hizq->altura - 1;
+    a->altura = a->altura + 1;
+    a->hIzq->altura = a->hIzq->altura - 1;
 }
 
-void RotacionDobleIzquierda(Alumnos &a)
+void rotacionDobleIzquierda(Alumnos &a)
 {
-    RotacionSimpleDerecha (a->hizq);
-    RotacionSimpleIzquierda (a);
+    rotacionSimpleDerecha(a->hIzq);
+    rotacionSimpleIzquierda(a);
     a->altura = a->altura - 1;
-    a->hder->altura = a->hder->altura - 1;
+    a->hDer->altura = a->hDer->altura - 1;
 }
 
-void RotacionDobleDerecha(Alumnos &a)
+void rotacionDobleDerecha(Alumnos &a)
 {
-    RotacionSimpleIzquierda (a->hder);
-    RotacionSimpleDerecha (a);
+    rotacionSimpleIzquierda(a->hDer);
+    rotacionSimpleDerecha(a);
     a->altura = a->altura - 1;
-    a->hizq->altura = a->hizq->altura - 1;
+    a->hIzq->altura = a->hIzq->altura - 1;
 }
 

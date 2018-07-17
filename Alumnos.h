@@ -35,12 +35,12 @@ void eliminarAlumnos(Alumnos &a);
 
 
 /** Rotaciones */
-void RotacionSimpleIzquierda(Alumnos &a);
+void rotacionSimpleIzquierda(Alumnos &a);
 
-void RotacionSimpleDerecha(Alumnos &a);
+void rotacionSimpleDerecha(Alumnos &a);
 
-void RotacionDobleIzquierda(Alumnos &a);
+void rotacionDobleIzquierda(Alumnos &a);
 
-void RotacionDobleDerecha(Alumnos &a);
+void rotacionDobleDerecha(Alumnos &a);
 
 #endif // ALUMNOS_H_INCLUDED

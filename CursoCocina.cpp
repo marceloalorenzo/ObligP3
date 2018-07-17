@@ -32,7 +32,8 @@ void listarAsignaturas(Asignaturas a){
 
 
 /** 5. Ingresar un nuevo alumno a la academia, chequeando que no existiera previamente. */
-void ingresarNuevoAlumno(Alumnos &a, Alumno alumno){
+void ingresarNuevoAlumno(Alumnos &a){
+    crearAlumnos(a);
 }
 
 /** 6. Listar los datos básicos de todos los alumnos de la academia,

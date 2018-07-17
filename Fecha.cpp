@@ -11,7 +11,7 @@ void cargarFecha(Fecha &f){
 }
 
 //muestra una fecha por pantalla
-void mostrarFecha(Fecha f){
+void printFecha(Fecha f){
     printf ("%d/%d/%d", f.dia, f.mes, f.anio);
 }
 
