@@ -6,7 +6,7 @@ void cargarAprobacion(Aprobacion &a)
     crearAsignaturas(a.asignatura);
     crearFecha(a.fechaAprobacion);
     printf("Ingrese calificación: ");
-    scanf("&d",a.calificacion);
+    scanf("%d",&a.calificacion);
 }
 
 /** Muestra por pantalla los datos de la Aprobacion */

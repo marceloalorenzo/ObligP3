@@ -40,28 +40,29 @@ void crearAlumnos(Alumnos &a)
     a = NULL;
 }
 
-/** Determina si Alumnos es vacio
+/** Determina si Alumnos es vacio*/
 Boolean vacioAlumnos(Alumnos a)
 {
-    boolean es=FALSE;
+    Boolean es=FALSE;
     if(a == NULL)
         es = TRUE;
     return es;
-}*/
+}
+
 
 /** Determina si el alumno alumn pertenece al AVL de Alumnos
 Boolean perteneceAlumnos(Alumnos a, Alumno alumn)
 {
-    if (a == NULL)
-        return FALSE;
-    else
-        if (a->info == alumn)
-            return TRUE;
-        else
-            if (alumn < a->info)
-                return Pertenece(a->HIzq,alumn);
-            else
-                return Pertenece(a->HDer,alumn);
+Boolean encontre=FALSE;
+while ((!encontre) && (a != NULL))
+if (alumn == a->info)
+encontre = TRUE;
+else
+if (alumn < a->info)
+a = a -> hIzq;
+else
+a = a -> hDer;
+return encontre;
 }
 */
 /** Inserta un Alumno al AVL de Alumnos */
@@ -83,18 +84,18 @@ void insertarAlumnos(Alumnos &a, Alumno alumn)
     }
 }
 
-/** Elimina el AVL de Alumnos, liberando la memoria
+/** Elimina el AVL de Alumnos, liberando la memoria*/
 void eliminarAlumnos(Alumnos &a)
 {
     if (a != NULL)
     {
-        Posorden (a->HIzq);
-        Posorden (a->HDer);
+        Posorden (a->hIzq);
+        Posorden (a->hDer);
         delete a;
         a = NULL;
     }
 }
-*/
+
 /** Rotaciones */
 void RotacionSimpleIzquierda(Alumnos &a)
 {
