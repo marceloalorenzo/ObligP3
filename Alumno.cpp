@@ -3,32 +3,33 @@
 /** Carga los datos recibidos por teclado de un Alumno */
 void cargarAlumno(Alumno &a)
 {
-    printf("Ingresar cedula: ");
+    printf("\n Registrar Alumno:");
+    printf("\n   Cedula:    ");
     scanf("%d", &a.cedula);
-    printf("Ingresar nombre: ");
-    strCargar(a.nombre);
-    printf("Ingresar apellido: ");
-    strCargar(a.apellido);
-    printf("Ingresar domicilio: ");
-    strCargar(a.domicilio);
-    printf("Ingresar telefono: ");
+    printf("   Nombre:    ");
+    strScan(a.nombre);
+    printf("   Apellido:  ");
+    strScan(a.apellido);
+    printf("   Domicilio: ");
+    strScan(a.domicilio);
+    printf("   Telefono:  ");
     scanf("%d", &a.telefono);
     crearAprobaciones(a.aprobaciones);
 }
 
-/** Muestra por pantalla los datos de un Alumno */
+/** Muestra por pantalla los datos Basicos de un Alumno */
 void printAlumno(Alumno a)
 {
-    printf("Informacion del Alumno: ");
-    printf("Cedula: %d", a.cedula);
-    printf("Nombre: ");
+    printf("%d", a.cedula);
+    printf(" | ");
     strPrint(a.nombre);
-    printf("Apellido: ");
+    printf(" | ");
     strPrint(a.apellido);
-    printf("Domicilio: ");
+    printf(" | ");
     strPrint(a.domicilio);
-    printf("Telefono: %d", a.telefono);
-    printAprobaciones(a.aprobaciones);
+    printf(" | ");
+    printf("%d", a.telefono);
+    printf("\n");
 }
 
 /** Selectora de la cedula */

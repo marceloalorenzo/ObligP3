@@ -29,7 +29,7 @@ void ingresarNuevoAlumno(Alumnos &a);
 
 /** 6. Listar los datos básicos de todos los alumnos de la academia,
  ordenados por cédula de menor a mayor. */
-
+void listarAlumnos(Alumnos a);
 
 /** 7. Agregar una nueva aprobación a la escolaridad de un alumno,
  verificando que el alumno esté registrado en el sistema, que no tenga la asignatura

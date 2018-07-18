@@ -9,6 +9,8 @@ int main()
     Asignaturas asignaturas;
     Alumnos alumnos;
 
+    crearAlumnos(alumnos);
+
     while (!salir){
         menu(opcion);
         switch(opcion){
@@ -28,7 +30,7 @@ int main()
                 ingresarNuevoAlumno(alumnos);
                 break;
             case 6:
-
+                listarAlumnos(alumnos);
                 break;
             case 7:
 

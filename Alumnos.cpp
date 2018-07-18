@@ -40,6 +40,7 @@ void crearAlumnos(Alumnos &a)
     a = NULL;
 }
 
+
 /** Determina si Alumnos es vacio*/
 Boolean vacioAlumnos(Alumnos a)
 {
@@ -51,35 +52,35 @@ Boolean vacioAlumnos(Alumnos a)
 
 
 /** Determina si el alumno alumn pertenece al AVL de Alumnos */
-Boolean perteneceAlumnos(Alumnos a, Alumno alumn){
+Boolean perteneceAlumnos(Alumnos a, int cedula){
     if(a == NULL)
         return FALSE;
-    if (darCedula(alumn) == darCedula(a->alumno))
+    if (cedula == darCedula(a->alumno))
         return TRUE;
     else {
-        if (darCedula(alumn) < darCedula(a->alumno))
-            perteneceAlumnos(a->hIzq, alumn);
+        if (cedula < darCedula(a->alumno))
+            perteneceAlumnos(a->hIzq, cedula);
         else
-            perteneceAlumnos(a->hDer, alumn);
+            perteneceAlumnos(a->hDer, cedula);
     }
 }
 
 /** Inserta un Alumno al AVL de Alumnos */
-void insertarAlumnos(Alumnos &a, Alumno alumn)
-{
+void insertarAlumnos(Alumnos &a, Alumno alumn){
     if (a == NULL){
         a = new NodoAVL;
         a->alumno = alumn;
         a->hIzq = NULL;
         a->hDer = NULL;
         a->altura = 1;
-    }else{
-    if (darCedula(alumn) < darCedula(a->alumno))
-        insertarAlumnos(a->hIzq,alumn);
-    else
-        insertarAlumnos(a->hDer,alumn);
-        balancearAlumnos(a);
-        a->altura = 1 + fmax(alturaAlumnos(a->hIzq), alturaAlumnos(a->hDer));
+    } else {
+        if (darCedula(alumn) < darCedula(a->alumno))
+            insertarAlumnos(a->hIzq,alumn);
+        else {
+            insertarAlumnos(a->hDer,alumn);
+            balancearAlumnos(a);
+            a->altura = 1 + fmax(alturaAlumnos(a->hIzq), alturaAlumnos(a->hDer));
+        }
     }
 }
 
@@ -131,3 +132,11 @@ void rotacionDobleDerecha(Alumnos &a)
     a->hIzq->altura = a->hIzq->altura - 1;
 }
 
+/** Imprime la informacion de todos los alumnos cargados en el AVL */
+void printAlumnos(Alumnos a){
+    if(a != NULL){
+        printAlumnos(a->hIzq);
+        printAlumno(a->alumno);
+        printAlumnos(a->hDer);
+    }
+}

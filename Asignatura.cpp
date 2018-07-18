@@ -1,6 +1,6 @@
 #include "Asignatura.h"
 void cargarAsignatura(Asignatura &a, int num){
-    printf("\n   Nombre Asignatura %d: ", num);
+    printf("   Nombre Asignatura %d: ", num);
     strScan(a.nombre);
     a.numero = num;
 }

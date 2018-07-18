@@ -25,7 +25,7 @@ void crearAlumnos(Alumnos &a);
 Boolean vacioAlumnos(Alumnos a);
 
 /** Determina si el alumno alumn pertenece al AVL de Alumnos */
-Boolean perteneceAlumnos(Alumnos a, Alumno alumn);
+Boolean perteneceAlumnos(Alumnos a, int cedula);
 
 /** Inserta un Alumno al AVL de Alumnos */
 void insertarAlumnos(Alumnos &a, Alumno alumn);
@@ -42,5 +42,8 @@ void rotacionSimpleDerecha(Alumnos &a);
 void rotacionDobleIzquierda(Alumnos &a);
 
 void rotacionDobleDerecha(Alumnos &a);
+
+/** Imprime la informacion de todos los alumnos cargados en el AVL */
+void printAlumnos(Alumnos a);
 
 #endif // ALUMNOS_H_INCLUDED

@@ -12,6 +12,7 @@ void registraAsignaturas(Asignaturas &a){
     crearAsignaturas(a, cantAsignaturas);
     printf("\n  Ingresar las asignaturas: \n");
     cargarAsignaturas(a);
+    printf("\n Se registraron %d asignaturas exitosamente.", cantAsignaturas);
 }
 
 
@@ -33,12 +34,24 @@ void listarAsignaturas(Asignaturas a){
 
 /** 5. Ingresar un nuevo alumno a la academia, chequeando que no existiera previamente. */
 void ingresarNuevoAlumno(Alumnos &a){
-    crearAlumnos(a);
+    Alumno alumno;
+    cargarAlumno(alumno);
+    if(perteneceAlumnos(a, darCedula(alumno))){
+        printf("\n Error - Ya existe un Alumno registrado con la cedula ingresada.");
+    } else {
+        insertarAlumnos(a, alumno);
+        printf("\n Alumno registrado exitosamente.");
+    }
 }
+
 
 /** 6. Listar los datos básicos de todos los alumnos de la academia,
  ordenados por cédula de menor a mayor. */
-
+void listarAlumnos(Alumnos a){
+    printf("\n Alumnos:");
+    printf("\n Cedula | Nombre | Apellido | Direccion | Telefono\n");
+    printAlumnos(a);
+}
 
 /** 7. Agregar una nueva aprobación a la escolaridad de un alumno,
  verificando que el alumno esté registrado en el sistema, que no tenga la asignatura
