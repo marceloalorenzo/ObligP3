@@ -22,7 +22,6 @@ void printAlumno(Alumno a);
 /** Selectora de la cedula */
 int darCedula(Alumno a);
 
-
 /** Selectora del nombre */
 void darNombre(String &s, Alumno a);
 
@@ -37,6 +36,7 @@ int darTelefono(Alumno a);
 
 /** Elimina la estructura de Alumno */
 void eliminarAlumno(Alumno &a);
+
 
 
 #endif // ALUMNO_H_INCLUDED

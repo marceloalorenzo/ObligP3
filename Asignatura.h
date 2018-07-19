@@ -2,6 +2,7 @@
 #define ASIGNATURA_H_INCLUDED
 #include <stdio.h>
 #include "String.h"
+#include "Boolean.h"
 
 typedef struct {int numero;
                 String nombre;

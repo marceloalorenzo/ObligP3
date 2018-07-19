@@ -33,10 +33,10 @@ int main()
                 listarAlumnos(alumnos);
                 break;
             case 7:
-
+                agregarAprobacionAlumno(alumnos, asignaturas);
                 break;
             case 8:
-
+                listarEscolaridad(alumnos);
                 break;
         }
     }

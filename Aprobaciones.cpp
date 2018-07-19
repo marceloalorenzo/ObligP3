@@ -13,6 +13,19 @@ void printAprobaciones(Aprobaciones a){
     }
 }
 
+/** Determina si una Aprobacion pertenece a la lista */
+Boolean perteneceAprobaciones(Aprobaciones a, Aprobacion aprobacion){
+    Boolean existe = FALSE;
+    while(a != NULL && !existe){
+        if(darNumero(a->aprobacion.asignatura) == darNumero(aprobacion.asignatura)){
+            existe = TRUE;
+        } else {
+            a = a->sig;
+        }
+    }
+    return existe;
+}
+
 /** Inserta una Aprobacion a la lista de Aprobaciones ordenado por fecha de aprobacion */
 void insertarAprobaciones(Aprobaciones &a, Aprobacion aprobacion){
     Aprobaciones aux = new NodoAprobaciones;

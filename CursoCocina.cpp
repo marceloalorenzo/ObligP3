@@ -49,14 +49,64 @@ void ingresarNuevoAlumno(Alumnos &a){
  ordenados por cédula de menor a mayor. */
 void listarAlumnos(Alumnos a){
     printf("\n Alumnos:");
-    printf("\n Cedula | Nombre | Apellido | Direccion | Telefono\n");
+    printf("\n Cedula|Nombre|Apellido|Direccion|Telefono\n");
     printAlumnos(a);
 }
 
 /** 7. Agregar una nueva aprobación a la escolaridad de un alumno,
  verificando que el alumno esté registrado en el sistema, que no tenga la asignatura
  aprobada de antes y también que tenga salvadas sus previas inmediatas. */
+void agregarAprobacionAlumno(Alumnos &a, Asignaturas asignaturas){
+    Alumno* alumno;
+    Aprobacion aprobacion;
+    int cedula, numAsig, posAsignatura;
+
+    /* Verificacion de que el alumno esta registrado en el sistema */
+    printf("\n Ingresar Cedula del Alumno: ");
+    scanf("%d", &cedula);
+    if(a == NULL){
+        printf("\n Error - La cedula ingresada no esta registrada en el sistema.\n");
+    } else {
+        if(!perteneceAlumnos(a, cedula))
+            printf("\n Error - La cedula ingresada no esta registrada en el sistema.\n");
+        else {
+            alumno = darAlumnoAVL(a, cedula);
+            printf(" Ingrese el numero de Asignatura: ");
+            scanf("%d", &numAsig);
+
+            /* Valido que el numero de Asignatura ingresado sea Valido */
+            if(numAsig > asignaturas.cantidad){
+                printf(" \nError - El numero de Asignatura ingresado no es valido.");
+            } else {
+                /* Ingreso Aprobacion */
+                posAsignatura = darAsignaturaLista(asignaturas, numAsig);
+                printf("\n Ingresar Aprobacion para la Asignatura:\n");
+                printAsignatura(asignaturas.asignatura[posAsignatura]);
+                cargarAprobacion(aprobacion, asignaturas.asignatura[posAsignatura]);
+                insertarAprobaciones(alumno->aprobaciones, aprobacion);
+                printf("\n Aprobacion ingresada exitosamente.");
+            }
+        }
+    }
+}
 
 
 /** 8. Dada la cédula de un alumno, listar su escolaridad, ordenada cronológicamente
  por fecha de aprobación. Se debe verificar que el alumno esté registrado en el sistema. */
+void listarEscolaridad(Alumnos a){
+    Alumno* alumno;
+    int cedula;
+    printf("\n Ingresar Cedula del Alumno: ");
+    scanf("%d", &cedula);
+    if(a == NULL){
+        printf("\n Error - La cedula ingresada no esta registrada en el sistema.\n");
+    } else {
+        if(!perteneceAlumnos(a, cedula))
+            printf("\n Error - La cedula ingresada no esta registrada en el sistema.\n");
+        else {
+            alumno = darAlumnoAVL(a, cedula);
+            printf("\n Asignatura|Fecha de Aprobacion|Calificacion");
+            printAprobaciones(alumno->aprobaciones);
+        }
+    }
+}

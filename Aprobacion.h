@@ -11,7 +11,7 @@ typedef struct {Asignatura asignatura;
                 } Aprobacion;
 
 /** Carga una Aprobacion recibiendo los datos desde teclado */
-void cargarAprobacion(Aprobacion &a);
+void cargarAprobacion(Aprobacion &a, Asignatura asignatura);
 
 /** Muestra por pantalla los datos de la Aprobacion */
 void printAprobacion(Aprobacion a);

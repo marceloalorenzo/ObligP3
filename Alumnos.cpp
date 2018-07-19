@@ -140,3 +140,23 @@ void printAlumnos(Alumnos a){
         printAlumnos(a->hDer);
     }
 }
+
+/** Busca un Alumno por su cedula en el AVL y devuelve la direccion de memoria del Alumno */
+Alumno* darAlumnoAVL(Alumnos a, int cedula){
+    Boolean encontreAlumno = FALSE;
+    int c;
+    Alumno* alumno;
+    while(!encontreAlumno && a != NULL){
+        c = darCedula(a->alumno);
+        if(cedula == c){
+            encontreAlumno = TRUE;
+            alumno = &a->alumno;
+        } else {
+            if(cedula < c)
+                a = a->hIzq;
+            else
+                a = a->hDer;
+        }
+    }
+    return alumno;
+}

@@ -1,16 +1,11 @@
 #include "Aprobacion.h"
 
 /** Carga una Aprobacion recibiendo los datos desde teclado */
-void cargarAprobacion(Aprobacion &a)
+void cargarAprobacion(Aprobacion &a, Asignatura asignatura)
 {
-    // TODO: Validar que el numero de Asignatura Ingresado sea Valido
-    int numAsig;
-    printf("\n Numero de Asignatura: ");
-    scanf("%d", &numAsig);
-    cargarAsignatura(a.asignatura, numAsig);
-    printf("\n Fecha de Aprobacion: ");
+    printf("\n  Fecha de Aprobacion: ");
     cargarFecha(a.fechaAprobacion);
-    printf("Calificacion: ");
+    printf("  Calificacion: ");
     scanf("%d", &a.calificacion);
 }
 
@@ -18,8 +13,10 @@ void cargarAprobacion(Aprobacion &a)
 void printAprobacion(Aprobacion a)
 {
     printAsignatura(a.asignatura);
+    printf("|");
     printFecha(a.fechaAprobacion);
-    printf("Calificación %d", a.calificacion);
+    printf("|");
+    printf("%d", a.calificacion);
 }
 
 /** Selectora del numero de Asignatura */

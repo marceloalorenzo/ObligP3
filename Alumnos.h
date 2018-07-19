@@ -46,4 +46,7 @@ void rotacionDobleDerecha(Alumnos &a);
 /** Imprime la informacion de todos los alumnos cargados en el AVL */
 void printAlumnos(Alumnos a);
 
+/** Busca un Alumno por su cedula en el AVL y devuelve la direccion de memoria del Alumno */
+Alumno* darAlumnoAVL(Alumnos a, int cedula);
+
 #endif // ALUMNOS_H_INCLUDED

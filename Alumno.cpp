@@ -20,14 +20,14 @@ void cargarAlumno(Alumno &a)
 /** Muestra por pantalla los datos Basicos de un Alumno */
 void printAlumno(Alumno a)
 {
-    printf("%d", a.cedula);
-    printf(" | ");
+    printf(" %d", a.cedula);
+    printf("|");
     strPrint(a.nombre);
-    printf(" | ");
+    printf("|");
     strPrint(a.apellido);
-    printf(" | ");
+    printf("|");
     strPrint(a.domicilio);
-    printf(" | ");
+    printf("|");
     printf("%d", a.telefono);
     printf("\n");
 }

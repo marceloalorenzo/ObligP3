@@ -34,9 +34,10 @@ void listarAlumnos(Alumnos a);
 /** 7. Agregar una nueva aprobación a la escolaridad de un alumno,
  verificando que el alumno esté registrado en el sistema, que no tenga la asignatura
  aprobada de antes y también que tenga salvadas sus previas inmediatas. */
-
+void agregarAprobacionAlumno(Alumnos &a, Asignaturas asignaturas);
 
 /** 8. Dada la cédula de un alumno, listar su escolaridad, ordenada cronológicamente
  por fecha de aprobación. Se debe verificar que el alumno esté registrado en el sistema. */
+void listarEscolaridad(Alumnos a);
 
 #endif // CURSOCOCINA_H_INCLUDED
