@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "CursoCocina.h"
 #include "Menu.h"
 
@@ -10,8 +11,10 @@ int main()
     Alumnos alumnos;
 
     crearAlumnos(alumnos);
-
-    while (!salir){
+do
+   {
+        system("cls");
+        fflush(stdin);
         menu(opcion);
         switch(opcion){
             case 1:
@@ -37,7 +40,20 @@ int main()
                 break;
             case 8:
                 listarEscolaridad(alumnos);
+                    system("cls");
+                    fflush(stdin);
                 break;
+            case 9:
+                {
+                }
+                break;
+            default:
+                {
+                    system("cls");
+                    fflush(stdin);
+                    printf("\nOpcion invalida, intente nuevamente\n");
+                    system("pause");
+                     }
         }
-    }
+    }while (opcion != 9);
 }

@@ -11,6 +11,7 @@ void menu(int &opcion){
     printf("\n  6. Listado de Alumnos.");
     printf("\n  7. Ingresar Aprobacion a Escolaridad de Alumno.");
     printf("\n  8. Listar Escolaridad de Alumno.");
+    printf("\n  9. Salir.");
     printf("\n Ingrese una opcion: ");
     scanf("%d", &opcion);
 }
