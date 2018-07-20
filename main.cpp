@@ -44,12 +44,51 @@ do
                 break;
             
             case 4:
-                void DFS (Previatura p, asignatura a, boolean b, Arraycon Tope a)
-                    //toquetear para ir cargando el arreglo del tope
-
-                break;
                 
-            case 5:
+              
+void ObtenerCamino (Grafo G, int u, int v, Camino &Sol)
+{
+ Inicializar (Sol);
+ boolean visitado[N];
+ for (int i=0; i<N; i++)
+ visitado[i] = false;
+DFS (G, u, v, visitado, Sol);
+} 
+  
+ void DFS (Previatura P, asignatura a, boolean b, Arraycon Tope a)
+ visitado[actual] = true;
+ if (actual == v)
+ InsBack (Sol, actual);
+ else
+ {
+int j=0;
+while (j < N && !visitado[v])
+{
+ if ((G[actual][j]) && (!visitado[j]))
+ DFS-Ej2a4 (G, j, v, visitado, Sol);
+ j++;
+}
+if (visitado[v])
+InsBack (Sol, actual);
+ }
+}   
+                    
+                    
+                    
+                    
+                    
+                    
+                 
+                
+                
+                
+                
+                
+                
+                
+                
+                
+          case 5:
                 ingresarNuevoAlumno(alumnos);
                 break;
                 
