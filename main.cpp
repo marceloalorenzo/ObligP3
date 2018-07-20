@@ -21,11 +21,11 @@ do
             case 1:
                 registraAsignaturas(asignaturas);
                 break;
-                
+
             case 2:
                 listarAsignaturas(asignaturas);
                 break;
-                
+
             case 3:
                 printf("Ingrese numero de asignatura 1: ");
                 strCrear(as1);
@@ -34,78 +34,53 @@ do
                 strCrear(as2);
                 scan(as2);
                 if (existeAsignatura(asignaturas,as1) && existeAsignatura(asignaturas,as2))
-                    agregarPreviatura(as1,as2)
+                    agregarPreviatura()
                 else
                     printf("Alguno de los datos ingresados son incorrectos.\n");
-
                 strDestruir(as1);
                 strDestruir(as2);
-                
                 break;
-            
+
             case 4:
                 //DFS con arreglo con tope de previas.
-              
-void ConsultarrPrevias (Previaturas p, int a1, int a2, ArrayconTope &a)
-{
- Inicializar (a);
- boolean visitado[N];
- for (int i=0; i<N; i++)
- visitado[i] = false;
-DFS (P, u, v, visitado, Sol);
-} 
-  
- void DFS (Previatura P, asignatura a, boolean b, Arraycon Tope a)
- visitado[actual] = true;
- if (actual == v)
- InsBack (Sol, actual);
- else
- {
-int j=0;
-while (j < N && !visitado[v])
-{
- if ((G[actual][j]) && (!visitado[j]))
- DFS-Ej2a4 (G, j, v, visitado, Sol);
- j++;
-}
-if (visitado[v])
-InsBack (Sol, actual);
- }
-}   
-                    
-                    
-                    
-                    
-                    
-                    
-                 
-                
-                
-                
-                
-                
-                
-                
-                
-                
+
+
+             void DFS (Previatura p, int verticeActual boolean visitado [N]){
+             visitado[actual] = true;
+             if (a1 == a2)
+             InsBack (Sol, actual);
+             else
+             {
+            int j=0;
+            while (j < N && !visitado[a2])
+            {
+             if ((p[a1][a2]) && (!visitado[j]))
+             DFS(p, j, v, visitado, Sol);
+             j++;
+            }
+            if (visitado[a2])
+            InsBack (Sol, actual);
+             }
+            }
+
           case 5:
                 ingresarNuevoAlumno(alumnos);
                 break;
-                
+
             case 6:
                 listarAlumnos(alumnos);
                 break;
-                
+
             case 7:
                 agregarAprobacionAlumno(alumnos, asignaturas);
-                
+
                 break;
             case 8:
                 listarEscolaridad(alumnos);
                     system("cls");
                     fflush(stdin);
                 break;
-                
+
             case 9:
                 {
                 }
