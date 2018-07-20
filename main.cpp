@@ -21,9 +21,11 @@ do
             case 1:
                 registraAsignaturas(asignaturas);
                 break;
+                
             case 2:
                 listarAsignaturas(asignaturas);
                 break;
+                
             case 3:
                 printf("Ingrese numero de asignatura 1: ");
                 strCrear(as1);
@@ -32,23 +34,27 @@ do
                 strCrear(as2);
                 scan(as2);
                 if (existeAsignatura(asignaturas,as1) && existeAsignatura(asignaturas,as2))
-                    agregarPreviatura(as1,as2,)
+                    agregarPreviatura(as1,as2)
                 else
                     printf("Alguno de los datos ingresados son incorrectos.\n");
 
                 strDestruir(as1);
                 strDestruir(as2);
-;
+                
                 break;
+            
             case 4:
 
                 break;
+                
             case 5:
                 ingresarNuevoAlumno(alumnos);
                 break;
+                
             case 6:
                 listarAlumnos(alumnos);
                 break;
+                
             case 7:
                 agregarAprobacionAlumno(alumnos, asignaturas);
                 break;
@@ -57,6 +63,7 @@ do
                     system("cls");
                     fflush(stdin);
                 break;
+                
             case 9:
                 {
                 }
