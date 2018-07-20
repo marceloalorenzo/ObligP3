@@ -49,8 +49,6 @@ void crearGrafoPreviaturas(Previaturas &p){
 /** Dados dos números de asignaturas agregar una previatura entre ellas */
 void agregarPreviatura(Previaturas &p, int a1, int a2){
     insFront(p[a1],a2);
-        if (a1 != a2)
-            insFront(p[a2],a1);
 }
 
 /** Dado el número que identifica a una asignatura,

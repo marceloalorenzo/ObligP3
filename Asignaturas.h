@@ -20,6 +20,9 @@ void cargarAsignaturas(Asignaturas &a);
 /** Muestra por pantalla cada una de las Asignaturas del Arreglo */
 void mostrarAsignaturas(Asignaturas a);
 
+/** Dado un numero de asignatura determina si la Asignatura pertenece al Array */
+Boolean existeAsignatura(Asignaturas a, int num);
+
 /** Busca una Asignatura por su numero en la lista y devuelve la posicion de la Asignatura en en Array */
 int darAsignaturaLista(Asignaturas a, int numAsig);
 

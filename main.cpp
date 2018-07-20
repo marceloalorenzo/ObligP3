@@ -9,12 +9,12 @@ int main()
     int opcion;
     Asignaturas asignaturas;
     Alumnos alumnos;
-    String as1,as2;
+    Previaturas previaturas;
 
     crearAlumnos(alumnos);
 do
    {
-        system("cls");
+//        system("cls");
         fflush(stdin);
         menu(opcion);
         switch(opcion){
@@ -27,43 +27,12 @@ do
                 break;
 
             case 3:
-                printf("Ingrese numero de asignatura 1: ");
-                strCrear(as1);
-                scan(as1);
-                printf("Ingrese numero de asignatura 2: ");
-                strCrear(as2);
-                scan(as2);
-                if (existeAsignatura(asignaturas,as1) && existeAsignatura(asignaturas,as2))
-                    agregarPreviatura()
-                else
-                    printf("Alguno de los datos ingresados son incorrectos.\n");
-                strDestruir(as1);
-                strDestruir(as2);
+                ingresarPreviatura(previaturas, asignaturas);
                 break;
 
             case 4:
-                //DFS con arreglo con tope de previas.
 
-
-             void DFS (Previatura p, int verticeActual boolean visitado [N]){
-             visitado[actual] = true;
-             if (a1 == a2)
-             InsBack (Sol, actual);
-             else
-             {
-            int j=0;
-            while (j < N && !visitado[a2])
-            {
-             if ((p[a1][a2]) && (!visitado[j]))
-             DFS(p, j, v, visitado, Sol);
-             j++;
-            }
-            if (visitado[a2])
-            InsBack (Sol, actual);
-             }
-            }
-
-          case 5:
+            case 5:
                 ingresarNuevoAlumno(alumnos);
                 break;
 

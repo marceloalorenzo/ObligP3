@@ -25,11 +25,41 @@ void listarAsignaturas(Asignaturas a){
 
 /** 3. Dados los números que identifican a dos asignaturas, agregar una previatura entre ellas,
  cuidando que no se forme un ciclo de previaturas en el sistema. */
+void ingresarPreviatura(Previaturas &p, Asignaturas asignaturas)
+{
+    int as1, as2;
+    printf("Ingrese numero de asignatura 1: ");
+    scanf("%d", &as1);
+    printf("Ingrese numero de asignatura 2: ");
+    scanf("%d", &as2);
+    if (existeAsignatura(asignaturas,as1) && existeAsignatura(asignaturas,as2)){
+        agregarPreviatura(p, as1, as2);
+        printf("Previatura ingresada exitosamente.");
+    } else
+        printf("Alguno de los datos ingresados son incorrectos.\n");
+}
 
 
 /** 4. Dado el número que identifica a una asignatura, obtener un listado conteniendo
  número y nombre de todas sus previas (no solamente de las previas inmediatas,
  sino de todas sus asignaturas previas). */
+void DFS (Previatura p, int verticeActual, boolean visitado [N]){
+     visitado[actual] = true;
+     if (a1 == a2)
+     InsBack (Sol, actual);
+     else
+     {
+    int j=0;
+    while (j < N && !visitado[a2])
+    {
+     if ((p[a1][a2]) && (!visitado[j]))
+     DFS(p, j, v, visitado, Sol);
+     j++;
+    }
+    if (visitado[a2])
+    InsBack (Sol, actual);
+     }
+}
 
 
 /** 5. Ingresar un nuevo alumno a la academia, chequeando que no existiera previamente. */

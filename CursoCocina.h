@@ -17,7 +17,7 @@ void listarAsignaturas(Asignaturas a);
 
 /** 3. Dados los números que identifican a dos asignaturas, agregar una previatura entre ellas,
  cuidando que no se forme un ciclo de previaturas en el sistema. */
-
+void ingresarPreviatura(Previaturas &p, Asignaturas asignaturas);
 
 /** 4. Dado el número que identifica a una asignatura, obtener un listado conteniendo
  número y nombre de todas sus previas (no solamente de las previas inmediatas,
