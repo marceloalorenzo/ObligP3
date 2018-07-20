@@ -44,9 +44,9 @@ do
                 break;
             
             case 4:
-                
+                //DFS con arreglo con tope de previas.
               
-void ObtenerCamino (Grafo G, int u, int v, Camino &Sol)
+void ObtenerPrevias (Grafo G, int u, int v, Camino &Sol)
 {
  Inicializar (Sol);
  boolean visitado[N];
