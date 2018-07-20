@@ -46,13 +46,13 @@ do
             case 4:
                 //DFS con arreglo con tope de previas.
               
-void ObtenerPrevias (Grafo G, int u, int v, Camino &Sol)
+void ConsultarrPrevias (Previaturas p, int a1, int a2, ArrayconTope &a)
 {
- Inicializar (Sol);
+ Inicializar (a);
  boolean visitado[N];
  for (int i=0; i<N; i++)
  visitado[i] = false;
-DFS (G, u, v, visitado, Sol);
+DFS (P, u, v, visitado, Sol);
 } 
   
  void DFS (Previatura P, asignatura a, boolean b, Arraycon Tope a)
