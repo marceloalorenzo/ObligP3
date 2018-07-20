@@ -9,6 +9,7 @@ int main()
     int opcion;
     Asignaturas asignaturas;
     Alumnos alumnos;
+    String as1,as2;
 
     crearAlumnos(alumnos);
 do
@@ -24,7 +25,21 @@ do
                 listarAsignaturas(asignaturas);
                 break;
             case 3:
+                printf("Ingrese asignatura 1: ");
+                strCrear(as1);
+                scan(as1);
+                printf("Ingrese asignatura 2: ");
+                strCrear(as2);
+                scan(as2);
+                if (existeAsignatura(asignaturas,as1) && existeAsignatura(asignaturas,as2))
+                    agregarPreviatura(c1,as2,m,c);
+                    agregarPreviatura(as1,as2,alumnos)
+                else
+                    printf("Alguno de los datos ingresados son incorrectos.\n");
 
+                strDestruir(as1);
+                strDestruir(as2);
+;
                 break;
             case 4:
 
