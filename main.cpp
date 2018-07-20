@@ -44,6 +44,8 @@ do
                 break;
             
             case 4:
+                void DFS (Previatura p, asignatura a, boolean b, Arraycon Tope a)
+                    //toquetear para ir cargando el arreglo del tope
 
                 break;
                 
@@ -57,6 +59,7 @@ do
                 
             case 7:
                 agregarAprobacionAlumno(alumnos, asignaturas);
+                
                 break;
             case 8:
                 listarEscolaridad(alumnos);
