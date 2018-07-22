@@ -15,62 +15,75 @@ int main()
 
     crearAlumnos(alumnos);
     do {
-//        system("cls");
         fflush(stdin);
         menu(opcion);
+        system("cls");
+        mostrarOpcion(opcion);
         switch(opcion){
+
             case 1:
+                printf("\n");
                 if(asignaturasRegistradas){
-                    printf("   Error - Las asignaturas ya fueron registradas.");
+                    printf("\n   Error - Las asignaturas ya fueron registradas.");
                 }else{
                     registraAsignaturas(asignaturas, previaturas);
                     asignaturasRegistradas = TRUE;
                 }
                 break;
+
             case 2:
+                printf("\n");
                 if(!asignaturasRegistradas){
-                    printf("   Error - Las asignaturas no fueron registradas.");
+                    printf("\n   Error - Las asignaturas no fueron registradas.");
                 }else{
                     listarAsignaturas(asignaturas);
                 }
                 break;
 
             case 3:
+                printf("\n");
                 if(!asignaturasRegistradas){
-                    printf("   Error - Las asignaturas no fueron registradas.");
+                    printf("\n   Error - Las asignaturas no fueron registradas.");
                 }else{
                     ingresarPreviatura(previaturas, asignaturas);
                 }
                 break;
 
             case 4:
+                printf("\n");
                 if(!asignaturasRegistradas){
-                    printf("   Error - Las asignaturas no fueron registradas.");
+                    printf("\n   Error - Las asignaturas no fueron registradas.");
                 }else{
                     listarPreviaturasAsignatura(previaturas, asignaturas);
                 }
                 break;
 
             case 5:
+                printf("\n");
                 ingresarNuevoAlumno(alumnos);
                 break;
 
             case 6:
+                printf("\n");
                 listarAlumnos(alumnos);
                 break;
 
             case 7:
+                printf("\n");
                 if(!asignaturasRegistradas){
-                    printf("   Error - Las asignaturas no fueron registradas.");
+                    printf("\n   Error - Las asignaturas no fueron registradas.");
                 }else{
                     agregarAprobacion(previaturas, alumnos, asignaturas);
                 }
                 break;
+
             case 8:
+                printf("\n");
                 listarEscolaridad(alumnos);
                 break;
 
             case 9:
+                printf("\n");
                 salir = TRUE;
                 //elimino todas las estructuras
                 if(asignaturasRegistradas){
@@ -84,7 +97,7 @@ int main()
                 {
                     system("cls");
                     fflush(stdin);
-                    printf("\nOpcion invalida, intente nuevamente\n");
+                    printf("\n Opcion invalida, intente nuevamente\n");
                     system("pause");
                 }
         }

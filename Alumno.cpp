@@ -3,9 +3,11 @@
 /** Carga los datos recibidos por teclado de un Alumno */
 void cargarAlumno(Alumno &a)
 {
-    printf("\n Registrar Alumno:");
-    printf("\n   Cedula:    ");
-    scanf("%d", &a.cedula);
+    do{
+        printf("\n   Cedula:    ");
+        scanf("%d", &a.cedula);
+    }while (!validarCedulaAlumno(a.cedula));
+
     printf("   Nombre:    ");
     strScan(a.nombre);
     printf("   Apellido:  ");
@@ -79,3 +81,36 @@ Boolean estaAprobadaAsiganturaAlumno(Alumno a, int numAsignatura){
     return perteneceAprobaciones(a.aprobaciones, numAsignatura);
 }
 
+/** Valida que la cedula cumpla con el chequeo de digito verificador.*/
+Boolean validarCedulaAlumno(int ci){
+    int div = 10000000;
+    int verif = 29876340;
+    int acum = 0;
+
+    int control_verif, control_ci;
+
+    while(div>1){
+        control_verif = verif / div;
+        control_ci = ci / div;
+
+        acum = acum + ( control_verif * control_ci) % 10;
+
+        verif = verif % div;
+        ci = ci % div;
+        div = div /10;
+    }
+
+    if( acum % 10 == 0){
+        acum = 0;
+    }else{
+        acum = 10 - acum % 10;
+    }
+
+    if(ci == acum){
+        return TRUE;
+    }else{
+        printf("   Error - Cedula invalida.");
+        return FALSE;
+    }
+
+}

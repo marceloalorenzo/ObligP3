@@ -1,6 +1,6 @@
 #include "Previaturas.h"
 
-/***/
+/** Crea las listas de previaturas y las inicializa en NULL */
 void crearPreviaturas(Previaturas &p, int cantAsignaturas){
     p = new ListaAdy[cantAsignaturas];
     for(int i = 0; i < cantAsignaturas; i++){
@@ -18,7 +18,7 @@ void listarPrevias(Previaturas p, Asignaturas a, int numAsignatura){
     if(previas == NULL){
         printf("\n La asignatura no tiene previas.");
     }else{
-        printf(" \nPreviaturas:");
+        printf("\n Previaturas:");
         while(previas != NULL){
             numPrevia = previas->numAsignatura;
             asignatura = darAsignatura(a, numPrevia);
@@ -31,17 +31,18 @@ void listarPrevias(Previaturas p, Asignaturas a, int numAsignatura){
 /** Dados dos números de asignaturas agregar una previatura entre ellas */
 void agregarPreviatura(Previaturas &p, int a1, int a2){
     if(pertenece(p, a1,a2)){
-        printf("   Error - La asignatura %d ya es previa de la asignatura %d.", a2, a1);
+        printf("\n   Error - La asignatura %d ya es previa de la asignatura %d.", a2, a1);
     }else{
         if(existeCicloPreviaturas(p,a1, a2)){
-            printf("   Error - Existe una referencia circular entre las asignaturas: %d y %d.", a2, a1);
+            printf("\n   Error - Existe una referencia circular entre las asignaturas: %d y %d.", a2, a1);
         }else{
             insFront(p[a1],a2);
-            printf("Previatura ingresada exitosamente.");
+            printf("\n  Previatura ingresada exitosamente.");
         }
     }
 }
 
+/** Determina si existe un ciclo en el grafo de previaturas */
 Boolean existeCicloPreviaturas(Previaturas &p, int a1, int a2){
     if(a1 == a2){
         return TRUE;
@@ -49,6 +50,7 @@ Boolean existeCicloPreviaturas(Previaturas &p, int a1, int a2){
     return pertenece(p, a2, a1);
 }
 
+/** Inserta un nuevo nodo al grafo de previaturas */
 void insFront(ListaAdy &l, int n){
     ListaAdy aux;
     aux = new NodoPreviaturas;
@@ -57,6 +59,7 @@ void insFront(ListaAdy &l, int n){
     l = aux;
 }
 
+/** Determina si una previa ya existe en la lista de previaturas */
 Boolean pertenece(Previaturas p, int asig, int previa){
     ListaAdy l = p[asig];
     while (l != NULL){
@@ -68,6 +71,7 @@ Boolean pertenece(Previaturas p, int asig, int previa){
     return FALSE;
 }
 
+/** Elimina la extructura de Grafo de Previaturas, liberando la memoria */
 void eliminarPreviaturas(Previaturas &p, int cantAsignaturas){
     for(int i = 0; i< cantAsignaturas; i++){
         eliminarListaAdy(p[i]);
@@ -75,7 +79,7 @@ void eliminarPreviaturas(Previaturas &p, int cantAsignaturas){
     delete [] p;
 }
 
-/** Elimina la ListaAdy*/
+/** Elimina la estructura de ListaAdy, liberando la memoria */
 void eliminarListaAdy(ListaAdy &l){
     if(l!=NULL){
         eliminarListaAdy(l->sig);

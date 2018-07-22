@@ -49,7 +49,7 @@ void insertarAprobaciones(Aprobaciones &a, Aprobacion aprobacion){
 
 /** Elimina la Lista de Aprobaciones, liberando la memoria */
 void eliminarAprobaciones(Aprobaciones &a){
-    if(a == NULL){
+    if(a != NULL){
         eliminarAprobaciones(a->sig);
         delete a;
     }

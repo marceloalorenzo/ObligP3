@@ -43,4 +43,6 @@ void agregarAprobacionAlumno(Alumno &a, Aprobacion aprobacion);
 /** Devuelve TRUE sii el alumno "a" tiene la asignatura "numAsignatura" aprobada */
 Boolean estaAprobadaAsiganturaAlumno(Alumno a, int numAsignatura);
 
+Boolean validarCedulaAlumno(int ci);
+
 #endif // ALUMNO_H_INCLUDED

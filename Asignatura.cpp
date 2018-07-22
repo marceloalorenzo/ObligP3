@@ -1,4 +1,6 @@
 #include "Asignatura.h"
+
+/** Carga una Asignatura recibiendo como parámetro el número de Asignatura */
 void cargarAsignatura(Asignatura &a, int num){
     printf("   Nombre Asignatura %d: ", num);
     strScan(a.nombre);
