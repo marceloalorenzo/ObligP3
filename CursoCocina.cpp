@@ -1,10 +1,10 @@
 #include "CursoCocina.h"
 
 /** 1. Registrar los nombres de todas las asignaturas que componen la carrera.
- Al momento de registrar cada una, se le asignarÃ¡ tambiÃ©n un nÃºmero que la
- identificarÃ¡ posteriormente en el programa. La primera asignatura en ser registrada
- tendrÃ¡ el nÃºmero 0, la siguiente el nÃºmero 1, la siguiente el nÃºmero 2, y asÃ­ sucesivamente. */
-void registraAsignaturas(Asignaturas &a){
+ Al momento de registrar cada una, se le asignará también un número que la
+ identificará posteriormente en el programa. La primera asignatura en ser registrada
+ tendrá el número 0, la siguiente el número 1, la siguiente el número 2, y así sucesivamente. */
+void registraAsignaturas(Asignaturas &a, Previaturas &p){
     /* TODO: validar que la cantidad de asignaturas ingresada sea un numero mayor que cero */
     int cantAsignaturas;
     printf("\n Cantidad de Asignaturas de la Carrera: ");
@@ -13,64 +13,49 @@ void registraAsignaturas(Asignaturas &a){
     printf("\n  Ingresar las asignaturas: \n");
     cargarAsignaturas(a);
     printf("\n Se registraron %d asignaturas exitosamente.", cantAsignaturas);
+    crearPreviaturas(p, cantAsignaturas);
 }
 
 
-/** 2. Listar nÃºmero y nombre de todas las asignaturas registradas en el sistema,
- ordenadas por nÃºmero de asignatura de menor a mayor. */
+/** 2. Listar número y nombre de todas las asignaturas registradas en el sistema,
+ ordenadas por número de asignatura de menor a mayor. */
 void listarAsignaturas(Asignaturas a){
     printf("\n Listado de Asignaturas: ");
     mostrarAsignaturas(a);
 }
 
-/** 3. Dados los nÃºmeros que identifican a dos asignaturas, agregar una previatura entre ellas,
+/** 3. Dados los números que identifican a dos asignaturas, agregar una previatura entre ellas,
  cuidando que no se forme un ciclo de previaturas en el sistema. */
 void ingresarPreviatura(Previaturas &p, Asignaturas asignaturas)
 {
     int as1, as2;
-    printf("Ingrese numero de asignatura 1: ");
+    printf("Ingrese numero de asignatura para agregar previas: ");
     scanf("%d", &as1);
-    printf("Ingrese numero de asignatura 2: ");
+    printf("Ingrese numero de asignatura previa: ");
     scanf("%d", &as2);
     if (existeAsignatura(asignaturas,as1) && existeAsignatura(asignaturas,as2)){
         agregarPreviatura(p, as1, as2);
-        printf("Previatura ingresada exitosamente.");
     } else
         printf("Alguno de los datos ingresados son incorrectos.\n");
 }
 
 
-/** 4. Dado el nÃºmero que identifica a una asignatura, obtener un listado conteniendo
- nÃºmero y nombre de todas sus previas (no solamente de las previas inmediatas,
+/** 4. Dado el número que identifica a una asignatura, obtener un listado conteniendo
+ número y nombre de todas sus previas (no solamente de las previas inmediatas,
  sino de todas sus asignaturas previas). */
-void consultarPrevias (Previaturas p, int idcurso,ListaAdy&l){
-    bool* visitado=new bool [10];
-    for(int i=0; i<N; i++){
-        visitado[i]=true;
+void listarPreviaturasAsignatura(Previaturas p, Asignaturas a){
+    int numAsignatura;
+    printf("Ingrese numero de asignatura: ");
+    scanf("%d", &numAsignatura);
+    Asignatura asignatura;
+    if(!existeAsignatura(a, numAsignatura)){
+        printf(" \nError - El numero de Asignatura ingresado no es valido.");
+    } else {
+        asignatura = darAsignatura(a, numAsignatura);
+        printAsignatura(asignatura);
+        listarPrevias(p,a, numAsignatura);
     }
-visitado[idcurso]=true;
-l=NULL;
-ListaAdy ady= p[idcurso];
-while(ady!=NULL){
-if(!visitado[ady->numAsignatura]){
-DFS(p,ady->numAsignatura, visitado, l);
-ady=ady->sig;
 }
-}
-}
-void DFS (Previaturas p, int idCurso, bool visitado [], ListaAdy&l){
-visitado[idCurso]=true;
-insFront(l,idCurso);
-ListaAdy ady= p[idCurso];
-while (ady!=NULL) {
-if(!visitado[ady-> numAsignatura])
-DFS (p, ady->numAsignatura, visitado, l);
-ady=ady-> sig;
-}
-
-}
-
-
 
 /** 5. Ingresar un nuevo alumno a la academia, chequeando que no existiera previamente. */
 void ingresarNuevoAlumno(Alumnos &a){
@@ -85,45 +70,47 @@ void ingresarNuevoAlumno(Alumnos &a){
 }
 
 
-/** 6. Listar los datos bÃ¡sicos de todos los alumnos de la academia,
- ordenados por cÃ©dula de menor a mayor. */
+/** 6. Listar los datos básicos de todos los alumnos de la academia,
+ ordenados por cédula de menor a mayor. */
 void listarAlumnos(Alumnos a){
     printf("\n Alumnos:");
     printf("\n Cedula|Nombre|Apellido|Direccion|Telefono\n");
     printAlumnos(a);
 }
 
-/** 7. Agregar una nueva aprobaciÃ³n a la escolaridad de un alumno,
- verificando que el alumno estÃ© registrado en el sistema, que no tenga la asignatura
- aprobada de antes y tambiÃ©n que tenga salvadas sus previas inmediatas. */
-void agregarAprobacionAlumno(Alumnos &a, Asignaturas asignaturas){
+/** 7. Agregar una nueva aprobación a la escolaridad de un alumno,
+ verificando que el alumno esté registrado en el sistema, que no tenga la asignatura
+ aprobada de antes y también que tenga salvadas sus previas inmediatas. */
+void agregarAprobacion(Previaturas p, Alumnos &a, Asignaturas asignaturas){
     Alumno* alumno;
     Aprobacion aprobacion;
-    int cedula, numAsig, posAsignatura;
+    Asignatura asignatura;
+    int cedula, numAsig;
 
     /* Verificacion de que el alumno esta registrado en el sistema */
     printf("\n Ingresar Cedula del Alumno: ");
     scanf("%d", &cedula);
-    if(a == NULL){
+    if(!perteneceAlumnos(a, cedula)){
         printf("\n Error - La cedula ingresada no esta registrada en el sistema.\n");
     } else {
-        if(!perteneceAlumnos(a, cedula))
-            printf("\n Error - La cedula ingresada no esta registrada en el sistema.\n");
-        else {
-            alumno = darAlumnoAVL(a, cedula);
-            printf(" Ingrese el numero de Asignatura: ");
-            scanf("%d", &numAsig);
+        alumno = darAlumnoAVL(a, cedula);
+        printf(" Ingrese el numero de Asignatura: ");
+        scanf("%d", &numAsig);
 
-            /* Valido que el numero de Asignatura ingresado sea Valido */
-            if(numAsig > asignaturas.cantidad){
-                printf(" \nError - El numero de Asignatura ingresado no es valido.");
-            } else {
+        /* Valido que el numero de Asignatura ingresado sea Valido */
+        if(!existeAsignatura(asignaturas, numAsig)){
+            printf("\nError - El numero de Asignatura ingresado no es valido.");
+        } else {
+
+            if(!cumplePreviaturasAsignatura(p, *alumno, numAsig)){
+                printf("\nError - El alumno no cumple con las previaturas de la asignatura %d", numAsig);
+            }else{
                 /* Ingreso Aprobacion */
-                posAsignatura = darAsignaturaLista(asignaturas, numAsig);
+                asignatura = darAsignatura(asignaturas, numAsig);
                 printf("\n Ingresar Aprobacion para la Asignatura:\n");
-                printAsignatura(asignaturas.asignatura[posAsignatura]);
-                cargarAprobacion(aprobacion, asignaturas.asignatura[posAsignatura]);
-                insertarAprobaciones(alumno->aprobaciones, aprobacion);
+                printAsignatura(asignatura);
+                cargarAprobacion(aprobacion, asignatura);
+                agregarAprobacionAlumno(*alumno, aprobacion);
                 printf("\n Aprobacion ingresada exitosamente.");
             }
         }
@@ -131,8 +118,8 @@ void agregarAprobacionAlumno(Alumnos &a, Asignaturas asignaturas){
 }
 
 
-/** 8. Dada la cÃ©dula de un alumno, listar su escolaridad, ordenada cronolÃ³gicamente
- por fecha de aprobaciÃ³n. Se debe verificar que el alumno estÃ© registrado en el sistema. */
+/** 8. Dada la cédula de un alumno, listar su escolaridad, ordenada cronológicamente
+ por fecha de aprobación. Se debe verificar que el alumno esté registrado en el sistema. */
 void listarEscolaridad(Alumnos a){
     Alumno* alumno;
     int cedula;

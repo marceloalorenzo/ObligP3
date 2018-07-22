@@ -6,31 +6,50 @@
 int main()
 {
     Boolean salir = FALSE;
-    int opcion;
+    Boolean asignaturasRegistradas = FALSE;
+
+    int opcion, i;
     Asignaturas asignaturas;
     Alumnos alumnos;
     Previaturas previaturas;
 
     crearAlumnos(alumnos);
-do
-   {
+    do {
 //        system("cls");
         fflush(stdin);
         menu(opcion);
         switch(opcion){
             case 1:
-                registraAsignaturas(asignaturas);
+                if(asignaturasRegistradas){
+                    printf("   Error - Las asignaturas ya fueron registradas.");
+                }else{
+                    registraAsignaturas(asignaturas, previaturas);
+                    asignaturasRegistradas = TRUE;
+                }
                 break;
-
             case 2:
-                listarAsignaturas(asignaturas);
+                if(!asignaturasRegistradas){
+                    printf("   Error - Las asignaturas no fueron registradas.");
+                }else{
+                    listarAsignaturas(asignaturas);
+                }
                 break;
 
             case 3:
-                ingresarPreviatura(previaturas, asignaturas);
+                if(!asignaturasRegistradas){
+                    printf("   Error - Las asignaturas no fueron registradas.");
+                }else{
+                    ingresarPreviatura(previaturas, asignaturas);
+                }
                 break;
 
             case 4:
+                if(!asignaturasRegistradas){
+                    printf("   Error - Las asignaturas no fueron registradas.");
+                }else{
+                    listarPreviaturasAsignatura(previaturas, asignaturas);
+                }
+                break;
 
             case 5:
                 ingresarNuevoAlumno(alumnos);
@@ -41,18 +60,25 @@ do
                 break;
 
             case 7:
-                agregarAprobacionAlumno(alumnos, asignaturas);
-
+                if(!asignaturasRegistradas){
+                    printf("   Error - Las asignaturas no fueron registradas.");
+                }else{
+                    agregarAprobacion(previaturas, alumnos, asignaturas);
+                }
                 break;
             case 8:
                 listarEscolaridad(alumnos);
-                    system("cls");
-                    fflush(stdin);
                 break;
 
             case 9:
-                {
+                salir = TRUE;
+                //elimino todas las estructuras
+                if(asignaturasRegistradas){
+                    i = darCantidadAsignaturas(asignaturas);
+                    eliminarPreviaturas(previaturas, i);
+                    eliminarAignaturas(asignaturas);
                 }
+                eliminarAlumnos(alumnos);
                 break;
             default:
                 {
@@ -60,7 +86,7 @@ do
                     fflush(stdin);
                     printf("\nOpcion invalida, intente nuevamente\n");
                     system("pause");
-                     }
+                }
         }
-    }while (opcion != 9);
+    }while (!salir);
 }

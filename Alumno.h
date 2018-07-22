@@ -37,6 +37,10 @@ int darTelefono(Alumno a);
 /** Elimina la estructura de Alumno */
 void eliminarAlumno(Alumno &a);
 
+/** Inserta la aprobacion a la lista de aprobaciones de la lista */
+void agregarAprobacionAlumno(Alumno &a, Aprobacion aprobacion);
 
+/** Devuelve TRUE sii el alumno "a" tiene la asignatura "numAsignatura" aprobada */
+Boolean estaAprobadaAsiganturaAlumno(Alumno a, int numAsignatura);
 
 #endif // ALUMNO_H_INCLUDED

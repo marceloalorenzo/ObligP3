@@ -3,7 +3,8 @@
 /** Carga una Aprobacion recibiendo los datos desde teclado */
 void cargarAprobacion(Aprobacion &a, Asignatura asignatura)
 {
-    printf("\n  Fecha de Aprobacion: ");
+    a.asignatura = asignatura;
+    printf("\n  Fecha de Aprobacion(dd/mm/aaaa): ");
     cargarFecha(a.fechaAprobacion);
     printf("  Calificacion: ");
     scanf("%d", &a.calificacion);
@@ -23,12 +24,6 @@ void printAprobacion(Aprobacion a)
 int darNumeroAsig(Aprobacion a)
 {
     return a.asignatura.numero;
-}
-
-/** Selectora del nombre de Asignatura */
-String darNombreAsig(String &s, Aprobacion a)
-{
-    strCop(s,a.asignatura.nombre);
 }
 
 /** Selectora de la Fecha de Aprobacion */

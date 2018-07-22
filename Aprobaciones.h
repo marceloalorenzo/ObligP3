@@ -17,7 +17,7 @@ void crearAprobaciones(Aprobaciones &a);
 void printAprobaciones(Aprobaciones a);
 
 /** Determina si una Aprobacion pertenece a la lista */
-Boolean perteneceAprobaciones(Aprobaciones a, Aprobacion aprobacion);
+Boolean perteneceAprobaciones(Aprobaciones a, int numAsignatura);
 
 /** Inserta una Aprobacion a la lista de Aprobaciones ordenado por fecha de aprobacion */
 void insertarAprobaciones(Aprobaciones &a, Aprobacion aprobacion);

@@ -24,7 +24,9 @@ void mostrarAsignaturas(Asignaturas a);
 Boolean existeAsignatura(Asignaturas a, int num);
 
 /** Busca una Asignatura por su numero en la lista y devuelve la posicion de la Asignatura en en Array */
-int darAsignaturaLista(Asignaturas a, int numAsig);
+Asignatura darAsignatura(Asignaturas a, int numAsig);
 
+/** Devuelve la cantidad de asignaturas */
+int darCantidadAsignaturas(Asignaturas a);
 
 #endif // ASIGNATURAS_H_INCLUDED

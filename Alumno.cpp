@@ -64,7 +64,18 @@ int darTelefono(Alumno a)
 }
 
 /** Elimina la estructura de Alumno */
-void eliminarAlumno(Alumno a)
+void eliminarAlumno(Alumno &a)
 {
     eliminarAprobaciones(a.aprobaciones);
 }
+
+/** Inserta la aprobacion a la lista de aprobaciones de la lista */
+void agregarAprobacionAlumno(Alumno &a, Aprobacion aprobacion){
+    insertarAprobaciones(a.aprobaciones, aprobacion);
+}
+
+/** Devuelve TRUE sii el alumno "a" tiene la asignatura "numAsignatura" aprobada */
+Boolean estaAprobadaAsiganturaAlumno(Alumno a, int numAsignatura){
+    return perteneceAprobaciones(a.aprobaciones, numAsignatura);
+}
+

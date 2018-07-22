@@ -55,14 +55,15 @@ Boolean vacioAlumnos(Alumnos a)
 Boolean perteneceAlumnos(Alumnos a, int cedula){
     if(a == NULL)
         return FALSE;
+
     if (cedula == darCedula(a->alumno))
         return TRUE;
-    else {
-        if (cedula < darCedula(a->alumno))
-            perteneceAlumnos(a->hIzq, cedula);
-        else
-            perteneceAlumnos(a->hDer, cedula);
-    }
+
+    if (cedula < darCedula(a->alumno))
+        return perteneceAlumnos(a->hIzq, cedula);
+    else
+        return perteneceAlumnos(a->hDer, cedula);
+
 }
 
 /** Inserta un Alumno al AVL de Alumnos */
@@ -91,6 +92,7 @@ void eliminarAlumnos(Alumnos &a)
     {
         eliminarAlumnos(a->hIzq);
         eliminarAlumnos(a->hDer);
+        eliminarAlumno(a->alumno);
         delete a;
     }
 }
@@ -143,13 +145,11 @@ void printAlumnos(Alumnos a){
 
 /** Busca un Alumno por su cedula en el AVL y devuelve la direccion de memoria del Alumno */
 Alumno* darAlumnoAVL(Alumnos a, int cedula){
-    Boolean encontreAlumno = FALSE;
     int c;
-    Alumno* alumno;
-    while(!encontreAlumno && a != NULL){
+    Alumno* alumno = NULL;
+    while(alumno == NULL && a != NULL){
         c = darCedula(a->alumno);
         if(cedula == c){
-            encontreAlumno = TRUE;
             alumno = &a->alumno;
         } else {
             if(cedula < c)

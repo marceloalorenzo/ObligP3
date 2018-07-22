@@ -14,16 +14,14 @@ void printAprobaciones(Aprobaciones a){
 }
 
 /** Determina si una Aprobacion pertenece a la lista */
-Boolean perteneceAprobaciones(Aprobaciones a, Aprobacion aprobacion){
-    Boolean existe = FALSE;
-    while(a != NULL && !existe){
-        if(darNumero(a->aprobacion.asignatura) == darNumero(aprobacion.asignatura)){
-            existe = TRUE;
-        } else {
-            a = a->sig;
+Boolean perteneceAprobaciones(Aprobaciones a, int numAsignatura){
+    while(a != NULL){
+        if(darNumero(a->aprobacion.asignatura) == numAsignatura){
+            return TRUE;
         }
+        a = a->sig;
     }
-    return existe;
+    return FALSE;
 }
 
 /** Inserta una Aprobacion a la lista de Aprobaciones ordenado por fecha de aprobacion */
