@@ -43,31 +43,33 @@ void ingresarPreviatura(Previaturas &p, Asignaturas asignaturas)
 /** 4. Dado el número que identifica a una asignatura, obtener un listado conteniendo
  número y nombre de todas sus previas (no solamente de las previas inmediatas,
  sino de todas sus asignaturas previas). */
-void consultarPrevias (Previatura p, int idcurso,ListaAdy&l){
-    boolean visitado[]=new boolean [N]
+void consultarPrevias (Previaturas p, int idcurso,ListaAdy&l){
+    bool* visitado=new bool [10];
     for(int i=0; i<N; i++){
-visitado[i]=FALSE;
-}
-visitado[idcurso]=TRUE;
-Crearlistaady(l);
+        visitado[i]=true;
+    }
+visitado[idcurso]=true;
+l=NULL;
 ListaAdy ady= p[idcurso];
 while(ady!=NULL){
-if(!visitdo[ady->numAsigntura){
-DFS(p,ady->numAsignatura, visitados l);
+if(!visitado[ady->numAsignatura]){
+DFS(p,ady->numAsignatura, visitado, l);
 ady=ady->sig;
 }
 }
-void DFS (Previatura p, int idcurso, boolean visitado [], ListaAdy&l){
-visitado[idcurso]=TRUE;
-Insfront(l,idCurso);
-ListaAdy ady= p[idcurso];
+}
+void DFS (Previaturas p, int idCurso, bool visitado [], ListaAdy&l){
+visitado[idCurso]=true;
+insFront(l,idCurso);
+ListaAdy ady= p[idCurso];
 while (ady!=NULL) {
-if(!visitado[p-> numAsignatura])
-DFS (p, p->numAsignatura, visitado, l);
+if(!visitado[ady-> numAsignatura])
+DFS (p, ady->numAsignatura, visitado, l);
 ady=ady-> sig;
 }
 
 }
+
 
 
 /** 5. Ingresar un nuevo alumno a la academia, chequeando que no existiera previamente. */
