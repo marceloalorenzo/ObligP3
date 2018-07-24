@@ -9,7 +9,7 @@
  Al momento de registrar cada una, se le asignará también un número que la
  identificará posteriormente en el programa. La primera asignatura en ser registrada
  tendrá el número 0, la siguiente el número 1, la siguiente el número 2, y así sucesivamente. */
-void registraAsignaturas(Asignaturas &a, Previaturas &p);
+void registraAsignaturas(Asignaturas &a, Previaturas &p, Boolean &registrada);
 
 /** 2. Listar número y nombre de todas las asignaturas registradas en el sistema,
  ordenadas por número de asignatura de menor a mayor. */

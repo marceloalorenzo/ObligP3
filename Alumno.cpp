@@ -15,7 +15,7 @@ void cargarAlumno(Alumno &a)
     printf("   Domicilio: ");
     strScan(a.domicilio);
     printf("   Telefono:  ");
-    scanf("%d", &a.telefono);
+    strScan(a.telefono);
     crearAprobaciones(a.aprobaciones);
 }
 
@@ -30,7 +30,7 @@ void printAlumno(Alumno a)
     printf("|");
     strPrint(a.domicilio);
     printf("|");
-    printf("%d", a.telefono);
+    strPrint(a.telefono);
     printf("\n");
 }
 
@@ -60,9 +60,9 @@ void darDomicilio(String &s, Alumno a)
 }
 
 /** Selectora del telefono */
-int darTelefono(Alumno a)
+void darTelefono(String &s, Alumno a)
 {
-    return a.telefono;
+    strCop(s,a.telefono);
 }
 
 /** Elimina la estructura de Alumno */
@@ -83,7 +83,7 @@ Boolean estaAprobadaAsiganturaAlumno(Alumno a, int numAsignatura){
 
 /** Valida que la cedula cumpla con el chequeo de digito verificador.*/
 Boolean validarCedulaAlumno(int ci){
-    int div = 10000000;
+    /*int div = 10000000;
     int verif = 29876340;
     int acum = 0;
 
@@ -111,6 +111,6 @@ Boolean validarCedulaAlumno(int ci){
     }else{
         printf("   Error - Cedula invalida.");
         return FALSE;
-    }
-
+    }*/
+return TRUE;
 }

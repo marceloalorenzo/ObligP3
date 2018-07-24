@@ -26,8 +26,7 @@ int main()
                 if(asignaturasRegistradas){
                     printf("\n   Error - Las asignaturas ya fueron registradas.");
                 }else{
-                    registraAsignaturas(asignaturas, previaturas);
-                    asignaturasRegistradas = TRUE;
+                    registraAsignaturas(asignaturas, previaturas, asignaturasRegistradas);
                 }
                 break;
 

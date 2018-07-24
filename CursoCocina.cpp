@@ -4,16 +4,22 @@
  Al momento de registrar cada una, se le asignará también un número que la
  identificará posteriormente en el programa. La primera asignatura en ser registrada
  tendrá el número 0, la siguiente el número 1, la siguiente el número 2, y así sucesivamente. */
-void registraAsignaturas(Asignaturas &a, Previaturas &p){
-    /* TODO: validar que la cantidad de asignaturas ingresada sea un numero mayor que cero */
+void registraAsignaturas(Asignaturas &a, Previaturas &p, Boolean &registrada){
     int cantAsignaturas;
     printf("\n Cantidad de Asignaturas de la Carrera: ");
     scanf("%d", &cantAsignaturas);
-    crearAsignaturas(a, cantAsignaturas);
-    printf("\n  Ingresar las asignaturas: \n");
-    cargarAsignaturas(a);
-    printf("\n Se registraron %d asignaturas exitosamente.", cantAsignaturas);
-    crearPreviaturas(p, cantAsignaturas);
+    if (cantAsignaturas >=2 && cantAsignaturas <=100){
+        crearAsignaturas(a, cantAsignaturas);
+        printf("\n  Ingresar las asignaturas: \n");
+        cargarAsignaturas(a);
+        printf("\n Se registraron %d asignaturas exitosamente.", cantAsignaturas);
+        crearPreviaturas(p, cantAsignaturas);
+        registrada = TRUE;
+    } else {
+        printf("\n  Error - La cantidad de asignaturas no es valida. Debe estar entre 2 y 100.");
+        registrada = FALSE;
+    }
+
 }
 
 

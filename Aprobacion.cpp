@@ -11,7 +11,7 @@ void cargarAprobacion(Aprobacion &a, Asignatura asignatura)
         cargarFecha(a.fechaAprobacion);
         printf("  Calificacion: ");
         scanf("%d", &calif);
-        if(calif >= 3){
+        if(calif >= 3 && calif <= 12){
             a.calificacion = calif;
             cargadaAprobacion = TRUE;
         } else {

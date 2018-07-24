@@ -8,7 +8,7 @@ typedef struct {int cedula;
                 String nombre;
                 String apellido;
                 String domicilio;
-                int telefono;
+                String telefono;
                 Aprobaciones aprobaciones;
                 } Alumno;
 
@@ -32,7 +32,7 @@ void darApellido(String &s, Alumno a);
 void darDomicilio(String &s, Alumno a);
 
 /** Selectora del telefono */
-int darTelefono(Alumno a);
+void darTelefono(String &s, Alumno a);
 
 /** Elimina la estructura de Alumno */
 void eliminarAlumno(Alumno &a);
