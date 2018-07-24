@@ -15,7 +15,7 @@ void cargarAprobacion(Aprobacion &a, Asignatura asignatura)
             a.calificacion = calif;
             cargadaAprobacion = TRUE;
         } else {
-            printf("\n Error - La calificacion debe ser mayor o igual que 3.");
+            printf("\n Error - La calificacion debe ser mayor o igual que 3 y menor o igual que 12.");
         }
     }
 }
@@ -45,5 +45,5 @@ Fecha darFechaAprobacion(Aprobacion a)
 /** Selectora de la Calificacion */
 int darCalificacion(Aprobacion a)
 {
-        return a.calificacion;
+    return a.calificacion;
 }

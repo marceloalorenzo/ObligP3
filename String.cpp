@@ -1,28 +1,13 @@
 #include "String.h"
 
-/* Crea un string vacío  */
+/** Crea un string vacío  */
 void strCrear (String &s)
 {
     s = new char[1];
     s[0] = '\0';
 }
 
-/*Carga el string con caracteres*/
-void strCargar(String &s)
-{
-    strCrear(s);
-    int i = 0;
-    char c;
-    scanf(" %c", &c);
-    while(c!='\n'){
-        s[i] = c;
-        scanf("%c", &c);
-        i++;
-    }
-    s[i] = '\0';
-}
-
-/* Libera la memoria usada por el string */
+/** Libera la memoria usada por el string */
  void strDestruir (String &s)
  {
     delete [] s;
@@ -30,7 +15,7 @@ void strCargar(String &s)
 }
 
 
-/* Devuelve el largo del String s */
+/** Devuelve el largo del String s */
 int strLar (String s)
 {
     int i=0;
@@ -39,7 +24,7 @@ int strLar (String s)
     return i;
 }
 
-/* Copia el contenido del string s2 en s1 */
+/** Copia el contenido del string s2 en s1 */
 void strCop (String &s1, String s2)
 {
     int i = 0;
@@ -54,7 +39,7 @@ void strCop (String &s1, String s2)
     s1[i] = '\0';
 }
 
-/* Lee el string s desde teclado */
+/** Lee el string s desde teclado */
 void strScan (String &s)
 {
     String aux = new char[MAX];
@@ -72,7 +57,7 @@ void strScan (String &s)
     strDestruir(aux);
 }
 
-/* Imprime el string s por pantalla */
+/** Imprime el string s por pantalla */
 void strPrint (String s)
 {
     int i = 0;

@@ -90,19 +90,6 @@ Boolean esMayorFecha(Fecha f1, Fecha f2){
     return esMenorFecha(f2,f1);
 }
 
-// Fecha f1 = f2
-Boolean esIgualFecha(Fecha f1, Fecha f2){
-    Boolean es = FALSE;
-    if(f1.anio == f2.anio){
-        if(f1.mes == f2.mes){
-            if(f1.dia == f2.dia){
-                es = TRUE;
-            }
-        }
-    }
-    return es;
-}
-
 // Escanea la Fecha ingresada desde el teclado
 void leerFecha(Fecha &f){
     scanf("%d/%d/%d", &f.dia, &f.mes, &f.anio);

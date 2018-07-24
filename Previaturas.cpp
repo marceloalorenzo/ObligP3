@@ -38,6 +38,7 @@ void listarPrevias(Previaturas p, Asignaturas a, int numAsignatura){
     }
 }
 
+/** Auxiliar DFS */
 void DFS (Previaturas p, int numAsignatura, Boolean* visitados, ListaAdy &l){
     visitados[numAsignatura] = TRUE;
     ListaAdy ady = p[numAsignatura];

@@ -10,34 +10,31 @@ typedef struct {int dia;
                }Fecha;
 
 
-//carga una fecha desde teclado
+/** carga una fecha desde teclado */
 void cargarFecha(Fecha &f);
 
-//muestra una fecha por pantalla
+/** muestra una fecha por pantalla */
 void printFecha(Fecha f);
 
-//selectora del dia
+/** selectora del dia */
 int darDia(Fecha f);
 
-//selectora del mes
+/** selectora del mes */
 int darMes(Fecha f);
 
-//selectora del anio
+/** selectora del anio */
 int darAnio(Fecha f);
 
-//determina si la fecha es válida o no
+/** determina si la fecha es válida o no */
 Boolean esValidaFecha(Fecha f);
 
-// Fecha f1 < f2
+/** Fecha f1 < f2 */
 Boolean esMenorFecha(Fecha f1, Fecha f2);
 
-// Fecha f1 = f2
-Boolean esIgualFecha(Fecha f1, Fecha f2);
-
-// Fecha f1 > f2
+/** Fecha f1 > f2 */
 Boolean esMayorFecha(Fecha f1, Fecha f2);
 
-// Escanea la Fecha ingresada desde el teclado
+/** Escanea la Fecha ingresada desde el teclado */
 void leerFecha(Fecha &f);
 
 #endif // FECHA_H_INCLUDED

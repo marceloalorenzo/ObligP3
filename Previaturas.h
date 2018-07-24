@@ -42,6 +42,7 @@ void eliminarListaAdy(ListaAdy &l);
 /** Devuelve TRUE sii el alumno "a" tiene aprobadas todas las previas de la asignatura "numAsignatura" */
 Boolean cumplePreviaturasAsignatura(Previaturas &p, Alumno a, int numAsignatura);
 
+/** Auxiliar DFS */
 void DFS (Previaturas p, int numAsignatura, Boolean* visitados, ListaAdy &l);
 
 #endif // PREVIATURAS_H_INCLUDED
