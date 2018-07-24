@@ -1,9 +1,9 @@
 #include "CursoCocina.h"
 
 /** 1. Registrar los nombres de todas las asignaturas que componen la carrera.
- Al momento de registrar cada una, se le asignará también un número que la
- identificará posteriormente en el programa. La primera asignatura en ser registrada
- tendrá el número 0, la siguiente el número 1, la siguiente el número 2, y así sucesivamente. */
+ Al momento de registrar cada una, se le asignarÃ¡ tambiÃ©n un nÃºmero que la
+ identificarÃ¡ posteriormente en el programa. La primera asignatura en ser registrada
+ tendrÃ¡ el nÃºmero 0, la siguiente el nÃºmero 1, la siguiente el nÃºmero 2, y asÃ­ sucesivamente. */
 void registraAsignaturas(Asignaturas &a, Previaturas &p, Boolean &registrada){
     int cantAsignaturas;
     printf("\n Cantidad de Asignaturas de la Carrera: ");
@@ -23,13 +23,13 @@ void registraAsignaturas(Asignaturas &a, Previaturas &p, Boolean &registrada){
 }
 
 
-/** 2. Listar número y nombre de todas las asignaturas registradas en el sistema,
- ordenadas por número de asignatura de menor a mayor. */
+/** 2. Listar nÃºmero y nombre de todas las asignaturas registradas en el sistema,
+ ordenadas por nÃºmero de asignatura de menor a mayor. */
 void listarAsignaturas(Asignaturas a){
     mostrarAsignaturas(a);
 }
 
-/** 3. Dados los números que identifican a dos asignaturas, agregar una previatura entre ellas,
+/** 3. Dados los nÃºmeros que identifican a dos asignaturas, agregar una previatura entre ellas,
  cuidando que no se forme un ciclo de previaturas en el sistema. */
 void ingresarPreviatura(Previaturas &p, Asignaturas asignaturas)
 {
@@ -45,8 +45,8 @@ void ingresarPreviatura(Previaturas &p, Asignaturas asignaturas)
 }
 
 
-/** 4. Dado el número que identifica a una asignatura, obtener un listado conteniendo
- número y nombre de todas sus previas (no solamente de las previas inmediatas,
+/** 4. Dado el nÃºmero que identifica a una asignatura, obtener un listado conteniendo
+ nÃºmero y nombre de todas sus previas (no solamente de las previas inmediatas,
  sino de todas sus asignaturas previas). */
 void listarPreviaturasAsignatura(Previaturas p, Asignaturas a){
     int numAsignatura;
@@ -60,6 +60,28 @@ void listarPreviaturasAsignatura(Previaturas p, Asignaturas a){
         printAsignatura(asignatura);
         listarPrevias(p,a, numAsignatura);
     }
+}
+/**Copio cÃ³digo del DFS de ayer. 
+for(int i=0; i<N; i++){
+visitado[i]=FALSE;
+}
+visitado[idcurso]=TRUE;
+Crearlistaady(l);
+ListaAdy ady= p[idcurso];
+while(ady!=NULL){
+if(!visitdo[ady->numAsigntura){
+DFS(p,ady->numAsignatura, visitados l);
+ady=ady->sig;
+}
+}
+void DFS (Previatura p, int idcurso, boolean visitado []. ListaAdy &l){
+visitado[idcurso]=TRUE;
+Insfront(l,idCurso);
+ListaAdy ady= p[idcurso];
+while (ady!=NULL) {
+if(!visitado[p-> numAsignatura])
+DFS (p, p->numAsignatura, visitado, l);
+ady=ady-> sig;
 }
 
 /** 5. Ingresar un nuevo alumno a la academia, chequeando que no existiera previamente. */
@@ -75,16 +97,16 @@ void ingresarNuevoAlumno(Alumnos &a){
 }
 
 
-/** 6. Listar los datos básicos de todos los alumnos de la academia,
- ordenados por cédula de menor a mayor. */
+/** 6. Listar los datos bÃ¡sicos de todos los alumnos de la academia,
+ ordenados por cÃ©dula de menor a mayor. */
 void listarAlumnos(Alumnos a){
     printf("\n Cedula|Nombre|Apellido|Direccion|Telefono\n");
     printAlumnos(a);
 }
 
-/** 7. Agregar una nueva aprobación a la escolaridad de un alumno,
- verificando que el alumno esté registrado en el sistema, que no tenga la asignatura
- aprobada de antes y también que tenga salvadas sus previas inmediatas. */
+/** 7. Agregar una nueva aprobaciÃ³n a la escolaridad de un alumno,
+ verificando que el alumno estÃ© registrado en el sistema, que no tenga la asignatura
+ aprobada de antes y tambiÃ©n que tenga salvadas sus previas inmediatas. */
 void agregarAprobacion(Previaturas p, Alumnos &a, Asignaturas asignaturas){
     Alumno* alumno;
     Aprobacion aprobacion;
@@ -125,8 +147,8 @@ void agregarAprobacion(Previaturas p, Alumnos &a, Asignaturas asignaturas){
 }
 
 
-/** 8. Dada la cédula de un alumno, listar su escolaridad, ordenada cronológicamente
- por fecha de aprobación. Se debe verificar que el alumno esté registrado en el sistema. */
+/** 8. Dada la cÃ©dula de un alumno, listar su escolaridad, ordenada cronolÃ³gicamente
+ por fecha de aprobaciÃ³n. Se debe verificar que el alumno estÃ© registrado en el sistema. */
 void listarEscolaridad(Alumnos a){
     Alumno* alumno;
     int cedula;
