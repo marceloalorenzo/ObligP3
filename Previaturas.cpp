@@ -19,14 +19,38 @@ void listarPrevias(Previaturas p, Asignaturas a, int numAsignatura){
         printf("\n La asignatura no tiene previas.");
     }else{
         printf("\n Previaturas:");
+
+        Boolean visitados[a.cantidad];
+        for(int i=0; i<a.cantidad; i++){
+            visitados[i]=FALSE;
+        }
+        ListaAdy l = NULL;
+        DFS(p, numAsignatura, visitados, l);
+        ListaAdy previas = l;
+
         while(previas != NULL){
             numPrevia = previas->numAsignatura;
             asignatura = darAsignatura(a, numPrevia);
             printAsignatura(asignatura);
             previas = previas->sig;
         }
+        eliminarListaAdy(l);
     }
 }
+
+void DFS (Previaturas p, int numAsignatura, Boolean* visitados, ListaAdy &l){
+    visitados[numAsignatura] = TRUE;
+    ListaAdy ady = p[numAsignatura];
+    while (ady != NULL) {
+        if(!visitados[ady->numAsignatura]){
+            insFront(l, ady->numAsignatura);
+            DFS (p, ady->numAsignatura, visitados, l);
+        }
+        ady = ady-> sig;
+    }
+}
+
+
 
 /** Dados dos números de asignaturas agregar una previatura entre ellas */
 void agregarPreviatura(Previaturas &p, int a1, int a2){

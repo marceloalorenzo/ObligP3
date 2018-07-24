@@ -58,30 +58,8 @@ void listarPreviaturasAsignatura(Previaturas p, Asignaturas a){
     } else {
         asignatura = darAsignatura(a, numAsignatura);
         printAsignatura(asignatura);
-        listarPrevias(p,a, numAsignatura);
+        listarPrevias(p, a, numAsignatura);
     }
-}
-/**Copio código del DFS de ayer. 
-for(int i=0; i<N; i++){
-visitado[i]=FALSE;
-}
-visitado[idcurso]=TRUE;
-Crearlistaady(l);
-ListaAdy ady= p[idcurso];
-while(ady!=NULL){
-if(!visitdo[ady->numAsigntura){
-DFS(p,ady->numAsignatura, visitados l);
-ady=ady->sig;
-}
-}
-void DFS (Previatura p, int idcurso, boolean visitado []. ListaAdy &l){
-visitado[idcurso]=TRUE;
-Insfront(l,idCurso);
-ListaAdy ady= p[idcurso];
-while (ady!=NULL) {
-if(!visitado[p-> numAsignatura])
-DFS (p, p->numAsignatura, visitado, l);
-ady=ady-> sig;
 }
 
 /** 5. Ingresar un nuevo alumno a la academia, chequeando que no existiera previamente. */
